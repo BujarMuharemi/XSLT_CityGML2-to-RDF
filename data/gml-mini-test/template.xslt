@@ -9,6 +9,7 @@ xmlns:gml="http://www.opengis.net/gml"
 xmlns:xlink="http://www.w3.org/1999/xlink" 
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:f="http://opendata.cz/xslt/functions#"
 xmlns:schema="http://schema.org/"
 xsi:schemaLocation="http://www.opengis.net/citygml/building/2.0 http://schemas.opengis.net/citygml/building/2.0/building.xsd http://www.opengis.net/citygml/appearance/2.0 http://schemas.opengis.net/citygml/appearance/2.0/appearance.xsd http://www.opengis.net/citygml/relief/2.0 http://schemas.opengis.net/citygml/relief/2.0/relief.xsd http://www.opengis.net/citygml/2.0 http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd http://www.opengis.net/citygml/generics/2.0 http://schemas.opengis.net/citygml/generics/2.0/generics.xsd">
 
@@ -17,6 +18,13 @@ xsi:schemaLocation="http://www.opengis.net/citygml/building/2.0 http://schemas.o
 
 
   <xsl:param name="ns">http://www.opengis.net/citygml/building/2.0/</xsl:param>
+
+<!-- Convert text into IRI-safe slug. -->
+  <xsl:function name="f:slugify">
+    <xsl:param name="text"/>
+    <xsl:value-of select="encode-for-uri(lower-case($text))"/>
+  </xsl:function>
+
   <!-- Templates -->
 <xsl:template match="/core:CityModel">
   <rdf:RDF><xsl:apply-templates/></rdf:RDF>
@@ -25,16 +33,31 @@ xsi:schemaLocation="http://www.opengis.net/citygml/building/2.0 http://schemas.o
 <xsl:template match="core:cityObjectMember/bldg:Building">
     <xsl:variable name="lod2Solid" select="bldg:lod2Solid"/>
     <xsl:variable name="Solid" select="gml:Solid"/>
-    <xsl:variable name="id" select="@gml:id"/>
+    <xsl:variable name="id" select="f:slugify(@gml:id)"/>
     
     
     <bldg:Building rdf:about="{concat('bldg:Building/', $id)}">
       <schema:identifier><xsl:value-of select="$id"/></schema:identifier>
       <xsl:apply-templates>
-        <xsl:with-param name="iri-slug" select="$id" tunnel="yes"/>
+        <xsl:with-param name="id" select="$id" tunnel="yes"/>
       </xsl:apply-templates>
     </bldg:Building>
 </xsl:template>
+
+ <xsl:template match="core:cityObjectMember/bldg:Building/bldg:boundedBy/bldg:WallSurface">
+    <!-- <xsl:variable name="id2" select="f:slugify(@gml:id)"/> -->
+
+    <xsl:param name="iri-slug" tunnel="yes"/>
+    <bldg:boundedBy>
+      <bldg:WallSurface rdf:about="{concat($ns, 'bldg:WallSurface/', $iri-slug)}"> 
+      <schema:identifier><xsl:value-of select="f:slugify(@gml:id)"/></schema:identifier>
+
+        <xsl:value-of select="f:slugify(@gml:id)"/>
+      </bldg:WallSurface>
+    </bldg:boundedBy>
+  </xsl:template>
+
+
         
 
 <!-- 

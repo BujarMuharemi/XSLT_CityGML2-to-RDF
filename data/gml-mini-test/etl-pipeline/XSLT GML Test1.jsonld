@@ -1,0 +1,312 @@
+[
+  {
+    "@graph": [
+      {
+        "@id": "http://localhost:8080/resources/pipelines/1651507446653",
+        "@type": [
+          "http://linkedpipes.com/ontology/Pipeline"
+        ],
+        "http://etl.linkedpipes.com/ontology/version": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#int",
+            "@value": "2"
+          }
+        ],
+        "http://linkedpipes.com/ontology/profile": [
+          {
+            "@id": "http://localhost:8080/resources/pipelines/1651507446653/profile/default"
+          }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+          {
+            "@value": "XSLT GML Test1"
+          }
+        ]
+      },
+      {
+        "@id": "http://localhost:8080/resources/pipelines/1651507446653/component/42b2-8f1c",
+        "@type": [
+          "http://linkedpipes.com/ontology/Component"
+        ],
+        "http://linkedpipes.com/ontology/configurationGraph": [
+          {
+            "@id": "http://localhost:8080/resources/pipelines/1651507446653/component/42b2-8f1c/configuration"
+          }
+        ],
+        "http://linkedpipes.com/ontology/template": [
+          {
+            "@id": "http://etl.linkedpipes.com/resources/components/t-xslt/0.0.0"
+          }
+        ],
+        "http://linkedpipes.com/ontology/x": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#integer",
+            "@value": "834"
+          }
+        ],
+        "http://linkedpipes.com/ontology/y": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#integer",
+            "@value": "77"
+          }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+          {
+            "@value": "XSLT transformer2"
+          }
+        ]
+      },
+      {
+        "@id": "http://localhost:8080/resources/pipelines/1651507446653/component/ce0b-8a49",
+        "@type": [
+          "http://linkedpipes.com/ontology/Component"
+        ],
+        "http://linkedpipes.com/ontology/configurationGraph": [
+          {
+            "@id": "http://localhost:8080/resources/pipelines/1651507446653/component/ce0b-8a49/configuration"
+          }
+        ],
+        "http://linkedpipes.com/ontology/template": [
+          {
+            "@id": "http://etl.linkedpipes.com/resources/components/e-textHolder/0.0.0"
+          }
+        ],
+        "http://linkedpipes.com/ontology/x": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#integer",
+            "@value": "583"
+          }
+        ],
+        "http://linkedpipes.com/ontology/y": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#integer",
+            "@value": "103"
+          }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+          {
+            "@value": "test.gml"
+          }
+        ]
+      },
+      {
+        "@id": "http://localhost:8080/resources/pipelines/1651507446653/component/cebb-82e6",
+        "@type": [
+          "http://linkedpipes.com/ontology/Component"
+        ],
+        "http://linkedpipes.com/ontology/configurationGraph": [
+          {
+            "@id": "http://localhost:8080/resources/pipelines/1651507446653/component/cebb-82e6/configuration"
+          }
+        ],
+        "http://linkedpipes.com/ontology/template": [
+          {
+            "@id": "http://etl.linkedpipes.com/resources/components/t-filesToRdfGraph/0.0.0"
+          }
+        ],
+        "http://linkedpipes.com/ontology/x": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#integer",
+            "@value": "1121"
+          }
+        ],
+        "http://linkedpipes.com/ontology/y": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#integer",
+            "@value": "98"
+          }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+          {
+            "@value": "Files to RDF single graph"
+          }
+        ]
+      },
+      {
+        "@id": "http://localhost:8080/resources/pipelines/1651507446653/connection/8e3f-bb28",
+        "@type": [
+          "http://linkedpipes.com/ontology/Connection"
+        ],
+        "http://linkedpipes.com/ontology/sourceBinding": [
+          {
+            "@value": "FilesOutput"
+          }
+        ],
+        "http://linkedpipes.com/ontology/sourceComponent": [
+          {
+            "@id": "http://localhost:8080/resources/pipelines/1651507446653/component/42b2-8f1c"
+          }
+        ],
+        "http://linkedpipes.com/ontology/targetBinding": [
+          {
+            "@value": "InputFiles"
+          }
+        ],
+        "http://linkedpipes.com/ontology/targetComponent": [
+          {
+            "@id": "http://localhost:8080/resources/pipelines/1651507446653/component/cebb-82e6"
+          }
+        ]
+      },
+      {
+        "@id": "http://localhost:8080/resources/pipelines/1651507446653/connection/c045-b4ea",
+        "@type": [
+          "http://linkedpipes.com/ontology/Connection"
+        ],
+        "http://linkedpipes.com/ontology/sourceBinding": [
+          {
+            "@value": "FilesOutput"
+          }
+        ],
+        "http://linkedpipes.com/ontology/sourceComponent": [
+          {
+            "@id": "http://localhost:8080/resources/pipelines/1651507446653/component/ce0b-8a49"
+          }
+        ],
+        "http://linkedpipes.com/ontology/targetBinding": [
+          {
+            "@value": "FilesInput"
+          }
+        ],
+        "http://linkedpipes.com/ontology/targetComponent": [
+          {
+            "@id": "http://localhost:8080/resources/pipelines/1651507446653/component/42b2-8f1c"
+          }
+        ]
+      },
+      {
+        "@id": "http://localhost:8080/resources/pipelines/1651507446653/profile/default",
+        "@type": [
+          "http://linkedpipes.com/ontology/ExecutionProfile"
+        ],
+        "http://linkedpipes.com/ontology/rdfRepositoryPolicy": [
+          {
+            "@id": "http://linkedpipes.com/ontology/repository/SingleRepository"
+          }
+        ]
+      }
+    ],
+    "@id": "http://localhost:8080/resources/pipelines/1651507446653"
+  },
+  {
+    "@graph": [
+      {
+        "@id": "http://localhost:8080/resources/pipelines/1651507446653/component/42b2-8f1c/configuration",
+        "@type": [
+          "http://plugins.linkedpipes.com/ontology/t-xslt#Configuration"
+        ],
+        "http://plugins.linkedpipes.com/ontology/t-xslt#extension": [
+          {
+            "@value": "xml"
+          }
+        ],
+        "http://plugins.linkedpipes.com/ontology/t-xslt#extensionControl": [
+          {
+            "@id": "http://plugins.linkedpipes.com/resource/configuration/None"
+          }
+        ],
+        "http://plugins.linkedpipes.com/ontology/t-xslt#skipOnError": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+            "@value": "false"
+          }
+        ],
+        "http://plugins.linkedpipes.com/ontology/t-xslt#skipOnErrorControl": [
+          {
+            "@id": "http://plugins.linkedpipes.com/resource/configuration/None"
+          }
+        ],
+        "http://plugins.linkedpipes.com/ontology/t-xslt#template": [
+          {
+            "@value": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<xsl:stylesheet version=\"2.0\" xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\"\nxmlns:core=\"http://www.opengis.net/citygml/2.0\" \nxmlns:gen=\"http://www.opengis.net/citygml/generics/2.0\" \nxmlns:bldg=\"http://www.opengis.net/citygml/building/2.0\" \nxmlns:app=\"http://www.opengis.net/citygml/appearance/2.0\" \nxmlns:dem=\"http://www.opengis.net/citygml/relief/2.0\" \nxmlns:gml=\"http://www.opengis.net/gml\" \nxmlns:xlink=\"http://www.w3.org/1999/xlink\" \nxmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" \nxmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n  xmlns:f=\"http://opendata.cz/xslt/functions#\"\nxmlns:schema=\"http://schema.org/\"\nxsi:schemaLocation=\"http://www.opengis.net/citygml/building/2.0 http://schemas.opengis.net/citygml/building/2.0/building.xsd http://www.opengis.net/citygml/appearance/2.0 http://schemas.opengis.net/citygml/appearance/2.0/appearance.xsd http://www.opengis.net/citygml/relief/2.0 http://schemas.opengis.net/citygml/relief/2.0/relief.xsd http://www.opengis.net/citygml/2.0 http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd http://www.opengis.net/citygml/generics/2.0 http://schemas.opengis.net/citygml/generics/2.0/generics.xsd\">\n\n<xsl:output method=\"xml\" version=\"1.0\" encoding=\"UTF-8\" indent=\"yes\" normalization-form=\"NFC\"/>\n<xsl:strip-space elements=\"*\"/>\n\n\n  <xsl:param name=\"ns\">http://www.opengis.net/citygml/building/2.0/</xsl:param>\n\n<!-- Convert text into IRI-safe slug. -->\n  <xsl:function name=\"f:slugify\">\n    <xsl:param name=\"text\"/>\n    <xsl:value-of select=\"encode-for-uri(lower-case($text))\"/>\n  </xsl:function>\n\n  <!-- Templates -->\n<xsl:template match=\"/core:CityModel\">\n  <rdf:RDF><xsl:apply-templates/></rdf:RDF>\n</xsl:template>\n\n<xsl:template match=\"core:cityObjectMember/bldg:Building\">\n    <xsl:variable name=\"lod2Solid\" select=\"bldg:lod2Solid\"/>\n    <xsl:variable name=\"Solid\" select=\"gml:Solid\"/>\n    <xsl:variable name=\"id\" select=\"f:slugify(@gml:id)\"/>\n    \n    \n    <bldg:Building rdf:about=\"{concat('bldg:Building/', $id)}\">\n      <schema:identifier><xsl:value-of select=\"$id\"/></schema:identifier>\n      <xsl:apply-templates>\n        <xsl:with-param name=\"id\" select=\"$id\" tunnel=\"yes\"/>\n      </xsl:apply-templates>\n    </bldg:Building>\n</xsl:template>\n\n <xsl:template match=\"core:cityObjectMember/bldg:Building/bldg:boundedBy/bldg:WallSurface\">\n    <!-- <xsl:variable name=\"id2\" select=\"f:slugify(@gml:id)\"/> -->\n\n    <xsl:param name=\"iri-slug\" tunnel=\"yes\"/>\n    <bldg:boundedBy>\n      <bldg:WallSurface rdf:about=\"{concat($ns, 'bldg:WallSurface/', $iri-slug)}\"> \n      <schema:identifier><xsl:value-of select=\"f:slugify(@gml:id)\"/></schema:identifier>\n\n        <xsl:value-of select=\"f:slugify(@gml:id)\"/>\n      </bldg:WallSurface>\n    </bldg:boundedBy>\n  </xsl:template>\n\n\n        \n\n<!-- \n<xsl:template match=\"bldg:Building/bldg:lod2Solid/gml:Solid\">\n    <xsl:text>&lt;bldg:Building bldg:lod2Solid gml:Solid</xsl:text>        \n</xsl:template>\n -->\n\n<!-- Catch-all empty template -->\n<xsl:template match=\"text()|@*\" mode=\"#all\"/>\n\n</xsl:stylesheet>"
+          }
+        ],
+        "http://plugins.linkedpipes.com/ontology/t-xslt#templateControl": [
+          {
+            "@id": "http://plugins.linkedpipes.com/resource/configuration/None"
+          }
+        ],
+        "http://plugins.linkedpipes.com/ontology/t-xslt#threadsControl": [
+          {
+            "@id": "http://plugins.linkedpipes.com/resource/configuration/None"
+          }
+        ]
+      }
+    ],
+    "@id": "http://localhost:8080/resources/pipelines/1651507446653/component/42b2-8f1c/configuration"
+  },
+  {
+    "@graph": [
+      {
+        "@id": "http://localhost:8080/resources/pipelines/1651507446653/component/ce0b-8a49/configuration",
+        "@type": [
+          "http://plugins.linkedpipes.com/ontology/e-textHolder#Configuration"
+        ],
+        "http://plugins.linkedpipes.com/ontology/e-textHolder#content": [
+          {
+            "@value": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<core:CityModel xmlns:core=\"http://www.opengis.net/citygml/2.0\" xmlns:gen=\"http://www.opengis.net/citygml/generics/2.0\" xmlns:bldg=\"http://www.opengis.net/citygml/building/2.0\" xmlns:app=\"http://www.opengis.net/citygml/appearance/2.0\" xmlns:dem=\"http://www.opengis.net/citygml/relief/2.0\" xmlns:gml=\"http://www.opengis.net/gml\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.opengis.net/citygml/building/2.0 http://schemas.opengis.net/citygml/building/2.0/building.xsd http://www.opengis.net/citygml/appearance/2.0 http://schemas.opengis.net/citygml/appearance/2.0/appearance.xsd http://www.opengis.net/citygml/relief/2.0 http://schemas.opengis.net/citygml/relief/2.0/relief.xsd http://www.opengis.net/citygml/2.0 http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd http://www.opengis.net/citygml/generics/2.0 http://schemas.opengis.net/citygml/generics/2.0/generics.xsd\">\n\n\t<core:cityObjectMember>\n\t\t<bldg:Building gml:id=\"_Simple_BD.1\">\n\t\t\t<bldg:lod2Solid>\n\t\t\t\t<gml:Solid>\n\t\t\t\t\t<gml:exterior>\n\t\t\t\t\t\t<gml:CompositeSurface>\n\t\t\t\t\t\t\t<gml:surfaceMember xlink:href=\"#_Simple_BD.1_PG.1\"/>\n\t\t\t\t\t\t</gml:CompositeSurface>\n\t\t\t\t\t</gml:exterior>\n\t\t\t\t</gml:Solid>\n\t\t\t</bldg:lod2Solid>\n\t\t\t<bldg:boundedBy>\n\t\t\t\t<bldg:WallSurface gml:id=\"_Simple_BD.1_WallSurface_1\">\n\t\t\t\t\t<bldg:lod2MultiSurface>\n\t\t\t\t\t\t<gml:MultiSurface>\n\t\t\t\t\t\t\t<gml:surfaceMember>\n\t\t\t\t\t\t\t\t<gml:Polygon gml:id=\"_Simple_BD.1_PG.1\">\n\t\t\t\t\t\t\t\t\t<gml:exterior>\n\t\t\t\t\t\t\t\t\t\t<gml:LinearRing gml:id=\"_Simple_BD.1_PG.1_LR.1\">\n\t\t\t\t\t\t\t\t\t\t\t<gml:posList srsDimension=\"3\">\n\t\t\t\t\t\t\t\t\t\t\t\t13.0 15.0 0.0\n\t\t\t\t\t\t\t\t\t\t\t\t13.0 15.0 3.0\n\t\t\t\t\t\t\t\t\t\t\t\t13.0 10.0 3.0\n\t\t\t\t\t\t\t\t\t\t\t\t13.0 10.0 0.0\n\t\t\t\t\t\t\t\t\t\t\t\t13.0 15.0 0.0\n\t\t\t\t\t\t\t\t\t\t\t</gml:posList>\n\t\t\t\t\t\t\t\t\t\t</gml:LinearRing>\n\t\t\t\t\t\t\t\t\t</gml:exterior>\n\t\t\t\t\t\t\t\t</gml:Polygon>\n\t\t\t\t\t\t\t</gml:surfaceMember>\n\t\t\t\t\t\t</gml:MultiSurface>\n\t\t\t\t\t</bldg:lod2MultiSurface>\n\t\t\t\t</bldg:WallSurface>\n      </bldg:boundedBy>  \n\t\t</bldg:Building>\n\t</core:cityObjectMember>\n</core:CityModel>"
+          }
+        ],
+        "http://plugins.linkedpipes.com/ontology/e-textHolder#contentControl": [
+          {
+            "@id": "http://plugins.linkedpipes.com/resource/configuration/None"
+          }
+        ],
+        "http://plugins.linkedpipes.com/ontology/e-textHolder#fileName": [
+          {
+            "@value": "test.gml"
+          }
+        ],
+        "http://plugins.linkedpipes.com/ontology/e-textHolder#fileNameControl": [
+          {
+            "@id": "http://plugins.linkedpipes.com/resource/configuration/None"
+          }
+        ]
+      }
+    ],
+    "@id": "http://localhost:8080/resources/pipelines/1651507446653/component/ce0b-8a49/configuration"
+  },
+  {
+    "@graph": [
+      {
+        "@id": "http://localhost:8080/resources/pipelines/1651507446653/component/cebb-82e6/configuration",
+        "@type": [
+          "http://plugins.linkedpipes.com/ontology/t-filesToRdfGraph#Configuration"
+        ],
+        "http://plugins.linkedpipes.com/ontology/t-filesToRdfGraph#commitSize": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#integer",
+            "@value": "50000"
+          }
+        ],
+        "http://plugins.linkedpipes.com/ontology/t-filesToRdfGraph#commitSizeControl": [
+          {
+            "@id": "http://plugins.linkedpipes.com/resource/configuration/None"
+          }
+        ],
+        "http://plugins.linkedpipes.com/ontology/t-filesToRdfGraph#mimeType": [
+          {
+            "@value": "application/rdf+xml"
+          }
+        ],
+        "http://plugins.linkedpipes.com/ontology/t-filesToRdfGraph#mimeTypeControl": [
+          {
+            "@id": "http://plugins.linkedpipes.com/resource/configuration/None"
+          }
+        ],
+        "http://plugins.linkedpipes.com/ontology/t-filesToRdfGraph#softFail": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+            "@value": "false"
+          }
+        ],
+        "http://plugins.linkedpipes.com/ontology/t-filesToRdfGraph#softFailControl": [
+          {
+            "@id": "http://plugins.linkedpipes.com/resource/configuration/None"
+          }
+        ]
+      }
+    ],
+    "@id": "http://localhost:8080/resources/pipelines/1651507446653/component/cebb-82e6/configuration"
+  }
+]
