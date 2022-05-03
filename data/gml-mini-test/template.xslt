@@ -30,6 +30,7 @@ xsi:schemaLocation="http://www.opengis.net/citygml/building/2.0 http://schemas.o
   <rdf:RDF><xsl:apply-templates/></rdf:RDF>
 </xsl:template>
 
+<!-- bldg:Building -->
 <xsl:template match="core:cityObjectMember/bldg:Building">
     <xsl:variable name="lod2Solid" select="bldg:lod2Solid"/>
     <xsl:variable name="Solid" select="gml:Solid"/>
@@ -44,27 +45,57 @@ xsi:schemaLocation="http://www.opengis.net/citygml/building/2.0 http://schemas.o
     </bldg:Building>
 </xsl:template>
 
+<!-- bldg:WallSurface -->
  <xsl:template match="core:cityObjectMember/bldg:Building/bldg:boundedBy/bldg:WallSurface">
     <!-- <xsl:variable name="id2" select="f:slugify(@gml:id)"/> -->
 
     <xsl:param name="iri-slug" tunnel="yes"/>
     <bldg:boundedBy>
-      <bldg:WallSurface rdf:about="{concat($ns, 'bldg:WallSurface/', $iri-slug)}"> 
+      <bldg:WallSurface rdf:about="{concat('bldg:WallSurface/', f:slugify(@gml:id))}"> 
       <schema:identifier><xsl:value-of select="f:slugify(@gml:id)"/></schema:identifier>
-
-        <xsl:value-of select="f:slugify(@gml:id)"/>
       </bldg:WallSurface>
     </bldg:boundedBy>
   </xsl:template>
 
+  <!-- bldg:RoofSurface -->
+ <xsl:template match="core:cityObjectMember/bldg:Building/bldg:boundedBy/bldg:RoofSurface">
+    <!-- <xsl:variable name="id2" select="f:slugify(@gml:id)"/> -->
 
-        
+    <xsl:param name="iri-slug" tunnel="yes"/>
+    <bldg:boundedBy>
+      <bldg:RoofSurface rdf:about="{concat('bldg:RoofSurface/', f:slugify(@gml:id))}"> 
+      <schema:identifier><xsl:value-of select="f:slugify(@gml:id)"/></schema:identifier>
+      </bldg:RoofSurface>
+    </bldg:boundedBy>
+  </xsl:template>
 
-<!-- 
-<xsl:template match="bldg:Building/bldg:lod2Solid/gml:Solid">
-    <xsl:text>&lt;bldg:Building bldg:lod2Solid gml:Solid</xsl:text>        
-</xsl:template>
- -->
+  <!-- bldg:GroundSurface -->
+ <xsl:template match="core:cityObjectMember/bldg:Building/bldg:boundedBy/bldg:GroundSurface">
+    <!-- <xsl:variable name="id2" select="f:slugify(@gml:id)"/> -->
+
+    <xsl:param name="iri-slug" tunnel="yes"/>
+    <bldg:boundedBy>
+      <bldg:GroundSurface rdf:about="{concat('bldg:GroundSurface/', f:slugify(@gml:id))}"> 
+      <schema:identifier><xsl:value-of select="f:slugify(@gml:id)"/></schema:identifier>
+      </bldg:GroundSurface>
+    </bldg:boundedBy>
+  </xsl:template>
+
+  <!-- gml:Polygon apply templates needs to be reconfigured. Also the matching in the hierarchy doesnt work.  -->
+ <xsl:template match="core:cityObjectMember/bldg:Building/bldg:boundedBy/*/gml:lod2MultiSurface/gml:MultiSurface/gml:surfaceMember/gml:Polygon">
+    <!-- <xsl:variable name="id2" select="f:slugify(@gml:id)"/> -->
+
+    <xsl:param name="iri-slug" tunnel="yes"/>
+    <gml:surfaceMember>
+      <gml:Polygon rdf:about="{concat('gml:Polygon/', f:slugify(@gml:id))}"> 
+      <schema:identifier><xsl:value-of select="f:slugify(@gml:id)"/></schema:identifier>
+      <xsl:apply-templates>
+        <xsl:with-param name="id" select="@gml:id" tunnel="yes"/>
+      </xsl:apply-templates>
+      </gml:Polygon>
+    </gml:surfaceMember>
+  </xsl:template>
+      
 
 <!-- Catch-all empty template -->
 <xsl:template match="text()|@*" mode="#all"/>
