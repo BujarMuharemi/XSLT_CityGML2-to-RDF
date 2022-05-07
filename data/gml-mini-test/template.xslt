@@ -50,6 +50,24 @@
     </bldg:boundedBy>
   </xsl:template>
 
+  <!-- bldg:lod2MultiSurface -->
+  <xsl:template match="bldg:lod2MultiSurface/gml:MultiSurface">
+    <xsl:variable name="id" select="../../bldg:WallSurface//@gml:id" />
+
+    <bldg:lod2MultiSurface>
+      <gml:MultiSurface rdf:about="{concat('bldg:MultiSurface/', $id)}">
+        <schema:identifier>
+          <xsl:value-of select="$id" />
+        </schema:identifier>
+        <xsl:apply-templates>
+          <xsl:with-param name="id" select="$id" tunnel="yes" />
+        </xsl:apply-templates>
+      </gml:MultiSurface>
+    </bldg:lod2MultiSurface>
+  </xsl:template>
+
+
+
   <!-- gml:Polygon apply templates needs to be reconfigured. Also the matching in the hierarchy doesnt work.  -->
   <xsl:template match="gml:Polygon[@gml:id]">
     <!-- <xsl:variable name="id2" select="f:slugify(@gml:id)"/> -->
@@ -85,7 +103,7 @@
   </xsl:template>
 
   <!-- bldg:GroundSurface -->
-  <xsl:template match="core:cityObjectMember/bldg:Building/bldg:boundedBy/bldg:GroundSurface">
+  <xsl:template match="bldg:GroundSurface">
     <xsl:variable name="id" select="f:slugify(@gml:id)" />
 
     <bldg:boundedBy>
