@@ -3,9 +3,10 @@ import json
 
 '''
 script for testing of the ETL REST API
-- should update the xslt template of the XSLT Transformer Component with the local .xslt file
-- should execute the pipeline
-- should return the respons of the request as terminal output 
+To do:
+    - should update the xslt template of the XSLT Transformer Component with the local .xslt file
+    - should execute the pipeline
+    - should return the respons of the request as terminal output 
 
 https://docs.python-requests.org/en/latest/api/
 https://docs.python-requests.org/en/latest/api/#requests.Request

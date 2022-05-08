@@ -36,32 +36,7 @@
 					</bldg:lod2MultiSurface>
 				</bldg:WallSurface>
       		</bldg:boundedBy>  
-
-			<bldg:boundedBy>
-				<bldg:WallSurface gml:id="_Simple_BD.1_WallSurface_2">
-					<bldg:lod2MultiSurface>
-						<gml:MultiSurface>
-							<gml:surfaceMember>
-								<gml:Polygon gml:id="_Simple_BD.1_PG.3">
-									<gml:exterior>
-										<gml:LinearRing gml:id="_Simple_BD.1_PG.3_LR.1">
-											<gml:posList srsDimension="3">
-												10.0 15.0 0.0
-												10.0 15.0 3.0
-												11.5 15.0 4.5
-												13.0 15.0 3.0
-												13.0 15.0 0.0
-												10.0 15.0 0.0<>
-											</gml:posList>
-										</gml:LinearRing>
-									</gml:exterior>
-								</gml:Polygon>
-							</gml:surfaceMember>
-						</gml:MultiSurface>
-					</bldg:lod2MultiSurface>
-				</bldg:WallSurface>
-			</bldg:boundedBy>
-			
+						
 		</bldg:Building>
 	</core:cityObjectMember>
 </core:CityModel>
