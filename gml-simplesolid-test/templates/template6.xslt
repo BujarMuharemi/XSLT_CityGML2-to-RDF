@@ -59,12 +59,15 @@
 
   <!-- surfaceMember -->
   <xsl:template match="bldg:Building/bldg:lod2Solid/gml:Solid/gml:exterior/gml:CompositeSurface/gml:surfaceMember">  
-    <xsl:variable name="id" select="f:slugify(@xlink:href)" />
+    <!-- <xsl:variable name="id" select="f:slugify(normalize-unicode(@xlink:href))" /> -->
+    <xsl:variable name="id" select="lower-case(translate( @xlink:href, '#', ''))" />
+
 
     <ex:has>
       <gml:surfaceMember rdf:about="{concat('gml:surfaceMember/', $id)}">
         <schema:identifier>
-          <xsl:value-of select="concat('surfaceMember.',$id)" />          
+          <!-- <xsl:value-of select="concat('surfacemember.',$id)" />      -->
+          <xsl:value-of select="$id" />          
         </schema:identifier>
 
         <xsl:apply-templates>
@@ -122,7 +125,7 @@
     <bldg:lod2MultiSurface>
       <gml:MultiSurface rdf:about="{concat('bldg:MultiSurface/', $id)}">
         <schema:identifier>
-          <xsl:value-of select="concat('MultiSurface.',$id)" />          
+          <xsl:value-of select="concat('multisurface.',$id)" />          
         </schema:identifier>
 
         <xsl:apply-templates>
