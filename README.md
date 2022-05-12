@@ -8,5 +8,5 @@ XSLT files for the transformation of citygml2 files into the rdf format. These a
 
 ## To Do
 - [ ] add source of the simplesolid file to readme
-- [ ] add lod2MultiSurface and generate ids for them
+- [X] add lod2MultiSurface and generate ids for them
 - [ ] add the lod2Solid tree, and link its nodes to the surface members
