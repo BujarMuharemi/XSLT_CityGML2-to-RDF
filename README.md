@@ -30,5 +30,5 @@ Two tests were performed, to get the final result. The first *gml-mini-test*, wa
 
 ## Final output graph
 The final graph can be found 
-[here](./gml-simplesolid-test/graph-images/rdf-grapher6.svg) .
+[here](./gml-simplesolid-test/graph-images/rdf-grapher7.svg) .
 
