@@ -8,27 +8,38 @@ Description: Script for testing the possibility of auto generating XSLT-RDF temp
 This should be possible because XML is a tree structure and thats just a restricted graph. 
 """
 
-# reading spt-temp file
-f = open(r'D:\Documents\_UNI\BA-IDP\repo\citygml2-to-rdf\python-spo\spo-temp.xslt', "r")
-og_lines = f.readlines()
+# reading spo-temp file
+f = open(r'/home/bujar/Documents/_HFT/BA_IDP/Repo/citygml2-to-rdf/python-spo/spo-temp.xslt', "r")
+og_lines = f.readlines() #original template, read from the file
 output_file = []
 
+
 xml = '<a xmlns="test"><b xmlns="test"/></a>'
-root = etree.parse(r'D:\Documents\_UNI\BA-IDP\repo\citygml2-to-rdf\gml-simplesolid-test\data\SimpleSolid.gml')
+root = etree.parse(r'/home/bujar/Documents/_HFT/BA_IDP/Repo/citygml2-to-rdf/gml-simplesolid-test/data/SimpleSolid.gml')
 
 
 # changes the template according to the parameters, so it can later be written to the output flie
 def writeToTemplate(matchingRegex,predicate,object):
-    print("-------",matchingRegex,predicate,object)
-    lines=og_lines
-
-    for i in range(len(og_lines)):        
-        lines[i] = re.sub("\${{matchingRegex}}",matchingRegex,og_lines[i])
-        lines[i] = re.sub("\${{predicate}}",predicate,og_lines[i])
-        lines[i] = re.sub("\${{object}}",object,og_lines[i])
-    #print(lines,"\n\n")
+    print("-------",matchingRegex,"\t",predicate,"\t",object)
+    lines=og_lines[:]
+    
+    for i in range(len(lines)):               
+        if re.search(r"\${{matchingRegex}}", lines[i]): 
+            lines[i] = re.sub("\${{matchingRegex}}",matchingRegex,lines[i])
+        elif re.search(r"\${{predicate}}", lines[i]): 
+            lines[i] = re.sub("\${{predicate}}",predicate,lines[i])
+        elif re.search(r"\${{object}}", lines[i]): 
+            lines[i] = re.sub("\${{object}}",object,lines[i])
+        #print(lines[i])
+        
+        #lines[i] = re.sub("\${{matchingRegex}}",matchingRegex,lines[i])
+        #lines[i] = re.sub("\${{predicate}}",predicate,lines[i])
+        #lines[i] = re.sub("\${{object}}",object,lines[i])
+        #print(lines[i])
+    #print("lines:\t",lines,"\n\n")
     output_file.append(lines)
-    print(len(output_file))
+    #lines=og_lines
+    #print(output_file)
 
 
 # getting all paths of the elements
@@ -59,11 +70,14 @@ for a in output:
     print(a)
     writeToTemplate(a,a.split("/")[1],a.split("/")[2])
 
+#writeToTemplate("bldg:Building/bldg:boundedBy/bldg:WallSurface","bldg:boundedBy","bldg:WallSurface")
+#writeToTemplate("bldg:Building/bldg:lod2Solid/gml:Solid","bldg:lod2Solid","bldg:Solid")
+
 
 #testing
-for item in output_file:
-    print(item)
-    print("\n\n")
+#for item in output_file:
+#    print(item)
+#    print("\n\n")
 
 
 #writing to file
