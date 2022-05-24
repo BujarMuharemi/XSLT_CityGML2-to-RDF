@@ -9,21 +9,17 @@ This should be possible because XML is a tree structure and thats just a restric
 """
 
 # reading spo-temp file
-f = open(r'/home/bujar/Documents/_HFT/BA_IDP/Repo/citygml2-to-rdf/python-spo/templates/spo-temp.xslt', "r")
+f = open(r'python-spo\templates\spo-temp.xslt', "r")
 og_lines = f.readlines() #original template, read from the file
 output_file = []
 
-
-xml = '<a xmlns="test"><b xmlns="test"/></a>'
-root = etree.parse(r'/home/bujar/Documents/_HFT/BA_IDP/Repo/citygml2-to-rdf/gml-simplesolid-test/data/SimpleSolid.gml')
-
+root = etree.parse(r'gml-simplesolid-test\data\SimpleSolid.gml')
 #root = etree.parse(r'/home/bujar/Documents/_HFT/BA_IDP/Data/Meidling/Meidling_citygml/Meilding_building/Meilding_one_building.gml')
-
 
 
 # changes the template according to the parameters, so it can later be written to the output flie
 def writeToTemplate(matchingRegex,predicate,object):
-    print("-------",matchingRegex,"\t",predicate,"\t",object)
+    #print("-------",matchingRegex,"\t",predicate,"\t",object)
     lines=og_lines[:]
     
     for i in range(len(lines)):               
@@ -33,11 +29,7 @@ def writeToTemplate(matchingRegex,predicate,object):
             lines[i] = re.sub("\${{predicate}}",predicate,lines[i])
         elif re.search(r"\${{object}}", lines[i]): 
             lines[i] = re.sub("\${{object}}",object,lines[i])
-        #print(lines[i])
-        
-        #lines[i] = re.sub("\${{matchingRegex}}",matchingRegex,lines[i])
-        #lines[i] = re.sub("\${{predicate}}",predicate,lines[i])
-        #lines[i] = re.sub("\${{object}}",object,lines[i])
+
         #print(lines[i])
     #print("lines:\t",lines,"\n\n")
     output_file.append(lines)
@@ -49,10 +41,9 @@ def writeToTemplate(matchingRegex,predicate,object):
 paths = [root.getpath(d) for d in root.iter()]
 output = set() # set for storing just unique triples
 
-# exterior>CompositeSurface>surfaceMember is missing because it has a / length of 8 ?
+# FIXME: exterior>CompositeSurface>surfaceMember is missing because it has a / length of 8 ?
 for e in paths:
     #print(e)
-    
     if(e.count("/")%2!=0 and e.count("/")>1):
         array = e.split("/")         
         array.pop(0) # remove first empty element
@@ -69,13 +60,28 @@ for e in paths:
 
 #showing found triples
 print("\nNumber of found SPO Triples: ",len(output))
+
+output_array=list(output)
+
+# for i in range(len(output_array)):
+#     print(i,":",output_array[i])
+#     writeToTemplate(output_array[i], output_array[i].split("/")[1], output_array[i].split("/")[2])
+
+blacklist=["gml:LinearRing"]
+print("Number of blacklisted triples: ",len(blacklist),"\nBlacklist: ",blacklist)
+
 for a in output:
-    print(a)
-    writeToTemplate(a,a.split("/")[1],a.split("/")[2])
+    for b in blacklist:
+        if not re.search(b, a.split("/")[2]): 
+            print("toOutput",a)
+            writeToTemplate(a,a.split("/")[1],a.split("/")[2])
+
+
+
+
 
 #writeToTemplate("bldg:Building/bldg:boundedBy/bldg:WallSurface","bldg:boundedBy","bldg:WallSurface")
 #writeToTemplate("bldg:Building/bldg:lod2Solid/gml:Solid","bldg:lod2Solid","bldg:Solid")
-
 
 #testing
 #for item in output_file:
@@ -84,7 +90,7 @@ for a in output:
 
 
 #writing to file
-with open('/home/bujar/Documents/_HFT/BA_IDP/Repo/citygml2-to-rdf/python-spo/output/output3.xslt', 'w') as f:
+with open('python-spo\output\output3.xslt', 'w') as f:
     for item in output_file:
         for i in item:
             i = i.rstrip()

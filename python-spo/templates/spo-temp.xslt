@@ -1,4 +1,5 @@
-<!-- base template for triples -->
+<!-- auto generate - Predicate:${{predicate}}  -->
+<!-- auto generate - Object:${{object}}  -->
   <xsl:template match="${{matchingRegex}}">  
     <xsl:variable name="id" select="f:slugify(@gml:id)" />
 
@@ -15,3 +16,4 @@
       </${{object}}>
     </${{predicate}}>
   </xsl:template>
+
