@@ -1,6 +1,6 @@
 <!-- base template for triples -->
   <xsl:template match="${{matchingRegex}}">  
-    <xsl:variable name="id" select="f:slugify(../../@gml:id)" />
+    <xsl:variable name="id" select="f:slugify(@gml:id)" />
 
     <${{predicate}}>
       <${{object}} rdf:about="{concat('${{object}}/', $id)}">

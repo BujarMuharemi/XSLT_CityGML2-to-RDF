@@ -9,13 +9,16 @@ This should be possible because XML is a tree structure and thats just a restric
 """
 
 # reading spo-temp file
-f = open(r'/home/bujar/Documents/_HFT/BA_IDP/Repo/citygml2-to-rdf/python-spo/spo-temp.xslt', "r")
+f = open(r'/home/bujar/Documents/_HFT/BA_IDP/Repo/citygml2-to-rdf/python-spo/templates/spo-temp.xslt', "r")
 og_lines = f.readlines() #original template, read from the file
 output_file = []
 
 
 xml = '<a xmlns="test"><b xmlns="test"/></a>'
 root = etree.parse(r'/home/bujar/Documents/_HFT/BA_IDP/Repo/citygml2-to-rdf/gml-simplesolid-test/data/SimpleSolid.gml')
+
+#root = etree.parse(r'/home/bujar/Documents/_HFT/BA_IDP/Data/Meidling/Meidling_citygml/Meilding_building/Meilding_one_building.gml')
+
 
 
 # changes the template according to the parameters, so it can later be written to the output flie
@@ -81,7 +84,7 @@ for a in output:
 
 
 #writing to file
-with open('.\\output.xslt', 'w') as f:
+with open('/home/bujar/Documents/_HFT/BA_IDP/Repo/citygml2-to-rdf/python-spo/output/output3.xslt', 'w') as f:
     for item in output_file:
         for i in item:
             i = i.rstrip()
