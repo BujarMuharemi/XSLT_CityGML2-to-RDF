@@ -13,6 +13,21 @@
     <xsl:value-of select="encode-for-uri(lower-case($text))" />
   </xsl:function>
 
+  <!-- ROOT entity/subject  -->
+  <!-- Change to the root element of your CityGML file  -->  
+  <xsl:template match="/ROOT">
+    <xsl:variable name="id" select="f:slugify(@gml:id)" />
+
+    </ROOT rdf:about="{concat('/ROOT', $id)}">
+      <schema:identifier>
+        <xsl:value-of select="$id" />
+      </schema:identifier>
+      <xsl:apply-templates>
+        <xsl:with-param name="id" select="$id" tunnel="yes" />
+      </xsl:apply-templates>
+    </ROOT>
+  </xsl:template>
+
   ${{spo-temp-output}}
 
   <!-- Catch-all empty template -->

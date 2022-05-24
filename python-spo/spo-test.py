@@ -6,12 +6,26 @@ from pathlib import Path
 """
 Description: Script for testing the possibility of auto generating XSLT-RDF templates files from the original CityGML files.
 This should be possible because XML is a tree structure and thats just a restricted graph. 
+
+TODO:   
+    - add output to a valid xslt output file with a serialized name (blank-output-template as base)     
+    - missing ids for objects: gml:MultiSurface   
+    - Building>Solid Linkage ? really necessary ?
+
+    Bugs? gml:MultiSurface ?
+
 """
 
 # reading spo-temp file
 f = open(r'python-spo\templates\spo-temp.xslt', "r")
 og_lines = f.readlines() #original template, read from the file
 output_file = []
+
+# blank-output-template
+blank_output_template = open(r'python-spo\templates\blank-output-template.xslt', "r")
+output_template = blank_output_template.readlines() #original template, read from the file
+print(output_template)
+
 
 root = etree.parse(r'gml-simplesolid-test\data\SimpleSolid.gml')
 #root = etree.parse(r'/home/bujar/Documents/_HFT/BA_IDP/Data/Meidling/Meidling_citygml/Meilding_building/Meilding_one_building.gml')
@@ -35,6 +49,8 @@ def writeToTemplate(matchingRegex,predicate,object):
     output_file.append(lines)
     #lines=og_lines
     #print(output_file)
+
+
 
 
 # getting all paths of the elements
@@ -67,16 +83,27 @@ output_array=list(output)
 #     print(i,":",output_array[i])
 #     writeToTemplate(output_array[i], output_array[i].split("/")[1], output_array[i].split("/")[2])
 
-blacklist=["gml:LinearRing"]
+
+blacklist=["core:cityObjectMember","gml:LinearRing"]    # used to blacklist triples, so they are not written to the output (root entity/subject must be here)
 print("Number of blacklisted triples: ",len(blacklist),"\nBlacklist: ",blacklist)
+write=True
+count=1
 
 for a in output:
+
     for b in blacklist:
-        if not re.search(b, a.split("/")[2]): 
-            print("toOutput",a)
-            writeToTemplate(a,a.split("/")[1],a.split("/")[2])
+        #print(re.search(b, a))
+        if (re.search(b, a.split("/")[2])): #just writing to template if not in blacklist
+            write=False
+        elif(re.search(b, a.split("/")[1])): # FIXME: is not searching cityObject Member...
+             write=False
+        else:
+            write=True
 
-
+    if(write):
+        print(count,": toOutput",a)
+        writeToTemplate(a,a.split("/")[1],a.split("/")[2])
+        count+=1
 
 
 

@@ -13,7 +13,7 @@ The following pictures show the different stages of the graph.
 - Graph#5 No working IDs
     - ![graph#5](./graph-images/rdf-grapher5_noIDs.png) 
 
-- Graph#6 wrong IDs
+- Graph#6 wrong IDs, not linking to the polygon IDs
     - ![graph#6wrong](./graph-images/rdf-grapher6_wrongIDs.png) 
 
 - Graph#6 wrong linkage to polygons, just over the schema:identifier (unnecessary long)
