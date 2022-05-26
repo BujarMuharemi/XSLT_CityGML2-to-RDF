@@ -4,7 +4,6 @@
   <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes" normalization-form="NFC" />
   <xsl:strip-space elements="*" />
 
-
   <xsl:param name="ns">http://www.opengis.net/citygml/building/2.0/</xsl:param>
 
   <!-- Convert text into IRI-safe slug. -->
@@ -15,10 +14,10 @@
 
   <!-- ROOT entity/subject  -->
   <!-- Change to the root element of your CityGML file  -->  
-  <xsl:template match="/ROOT">
+  <xsl:template match="ROOT/">
     <xsl:variable name="id" select="f:slugify(@gml:id)" />
 
-    </ROOT rdf:about="{concat('/ROOT', $id)}">
+    <ROOT rdf:about="{concat('ROOT/', $id)}">
       <schema:identifier>
         <xsl:value-of select="$id" />
       </schema:identifier>
@@ -28,7 +27,7 @@
     </ROOT>
   </xsl:template>
 
-  ${{spo-temp-output}}
+  ${{spo_temp_output}}
 
   <!-- Catch-all empty template -->
   <xsl:template match="text()|@*" mode="#all" />

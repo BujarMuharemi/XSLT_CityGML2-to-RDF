@@ -7,9 +7,7 @@ from pathlib import Path
 Description: Script for testing the possibility of auto generating XSLT-RDF templates files from the original CityGML files.
 This should be possible because XML is a tree structure and thats just a restricted graph. 
 
-TODO:   
-    - fix blacklist bug
-    - add output to a valid xslt output file with a serialized name (blank-output-template as base)     
+TODO:    
     - missing ids for objects: gml:MultiSurface   
     - Building>Solid Linkage ? really necessary ?
 
@@ -19,14 +17,13 @@ TODO:
 
 
 # reading spo-temp file
-f = open(r'python-spo\templates\spo-temp.xslt', "r")
-og_lines = f.readlines() #original template, read from the file
-output_file = []
+spo_template = open(r'python-spo\templates\spo-temp.xslt', "r")
+spo_temp_og_lines = spo_template.readlines() #original template, read from the file
+spo_output_file = []
 
 # blank-output-template
 blank_output_template = open(r'python-spo\templates\blank-output-template.xslt', "r")
-output_template = blank_output_template.readlines() #original template, read from the file
-#print(output_template)
+output_template_lines = blank_output_template.readlines() #original template, read from the file
 
 # reading input gml file
 root = etree.parse(r'gml-simplesolid-test\data\SimpleSolid.gml')
@@ -36,7 +33,7 @@ root = etree.parse(r'gml-simplesolid-test\data\SimpleSolid.gml')
 # changes the template according to the parameters, so it can later be written to the output flie
 def writeToOutputTemplate(matchingRegex,predicate,object):
     #print("-------",matchingRegex,"\t",predicate,"\t",object)
-    lines=og_lines[:]
+    lines=spo_temp_og_lines[:]
     
     for i in range(len(lines)):               
         if re.search(r"\${{matchingRegex}}", lines[i]): 
@@ -48,7 +45,7 @@ def writeToOutputTemplate(matchingRegex,predicate,object):
 
         #print(lines[i])
     #print("lines:\t",lines,"\n\n")
-    output_file.append(lines)
+    spo_output_file.append(lines)
     #lines=og_lines
     #print(output_file)
 
@@ -97,14 +94,23 @@ for triples in output_array:
     print(">> to output ",writeCount,": ",triples)
     writeToOutputTemplate(triples, triples.split("/")[1], triples.split("/")[2])
     writeCount+=1
-
 print("Wrote ",writeCount," triples to file.")
 
 
-#writing to file
-with open('python-spo\output\output3.xslt', 'w') as f:
-    for item in output_file:
-        for i in item:
-            i = i.rstrip()
-            f.write("%s\n" % i)
+# turning the spo_output_file from a 2d array to a 1d string array
+ab=''.join(str(item) for innerlist in spo_output_file for item in innerlist)
 
+# writing to blak-output-template
+for l in range(len(output_template_lines)):
+    if re.search(r"\${{spo_temp_output}}", output_template_lines[l]): 
+        output_template_lines[l] = ab
+
+
+#writing to file
+with open('python-spo\output\output3.xslt', 'w') as spo_template:
+    for line in output_template_lines:
+        line = line.strip() # removing whitespaces
+        #print(line) # print out every line, which is written to the file
+        spo_template.write("%s\n" % line)
+
+print("Wrote to file.")
