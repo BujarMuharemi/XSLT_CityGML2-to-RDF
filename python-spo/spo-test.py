@@ -8,6 +8,7 @@ Description: Script for testing the possibility of auto generating XSLT-RDF temp
 This should be possible because XML is a tree structure and thats just a restricted graph. 
 
 TODO:   
+    - fix blacklist bug
     - add output to a valid xslt output file with a serialized name (blank-output-template as base)     
     - missing ids for objects: gml:MultiSurface   
     - Building>Solid Linkage ? really necessary ?
@@ -15,6 +16,7 @@ TODO:
     Bugs? gml:MultiSurface ?
 
 """
+
 
 # reading spo-temp file
 f = open(r'python-spo\templates\spo-temp.xslt', "r")
@@ -24,15 +26,15 @@ output_file = []
 # blank-output-template
 blank_output_template = open(r'python-spo\templates\blank-output-template.xslt', "r")
 output_template = blank_output_template.readlines() #original template, read from the file
-print(output_template)
+#print(output_template)
 
-
+# reading input gml file
 root = etree.parse(r'gml-simplesolid-test\data\SimpleSolid.gml')
 #root = etree.parse(r'/home/bujar/Documents/_HFT/BA_IDP/Data/Meidling/Meidling_citygml/Meilding_building/Meilding_one_building.gml')
 
 
 # changes the template according to the parameters, so it can later be written to the output flie
-def writeToTemplate(matchingRegex,predicate,object):
+def writeToOutputTemplate(matchingRegex,predicate,object):
     #print("-------",matchingRegex,"\t",predicate,"\t",object)
     lines=og_lines[:]
     
@@ -50,8 +52,7 @@ def writeToTemplate(matchingRegex,predicate,object):
     #lines=og_lines
     #print(output_file)
 
-
-
+############################################################
 
 # getting all paths of the elements
 paths = [root.getpath(d) for d in root.iter()]
@@ -75,45 +76,29 @@ for e in paths:
 
 
 #showing found triples
-print("\nNumber of found SPO Triples: ",len(output))
-
+print("\n═══ Number of found SPO Triples: ",len(output),"═══")
 output_array=list(output)
 
-# for i in range(len(output_array)):
-#     print(i,":",output_array[i])
-#     writeToTemplate(output_array[i], output_array[i].split("/")[1], output_array[i].split("/")[2])
+for i in range(len(output_array)):
+    print(i,":",output_array[i])
 
+blacklist = input("\nEnter number of triples, which should be skipped (like 5,6,7)").split(",") # getting blacklist from user
 
-blacklist=["core:cityObjectMember","gml:LinearRing"]    # used to blacklist triples, so they are not written to the output (root entity/subject must be here)
-print("Number of blacklisted triples: ",len(blacklist),"\nBlacklist: ",blacklist)
-write=True
-count=1
+print("\n═══ Removing choosen triples ═══")
+removedCount=0 # counter when removing an element
+for i in blacklist:
+    print("removed: ",output_array[int(i)-removedCount])
+    output_array.remove(output_array[int(i)-removedCount])
+    removedCount+=1
 
-for a in output:
+print("\n═══ Writing to output file ═══")
+writeCount=0
+for triples in output_array:
+    print(">> to output ",writeCount,": ",triples)
+    writeToOutputTemplate(triples, triples.split("/")[1], triples.split("/")[2])
+    writeCount+=1
 
-    for b in blacklist:
-        #print(re.search(b, a))
-        if (re.search(b, a.split("/")[2])): #just writing to template if not in blacklist
-            write=False
-        elif(re.search(b, a.split("/")[1])): # FIXME: is not searching cityObject Member...
-             write=False
-        else:
-            write=True
-
-    if(write):
-        print(count,": toOutput",a)
-        writeToTemplate(a,a.split("/")[1],a.split("/")[2])
-        count+=1
-
-
-
-#writeToTemplate("bldg:Building/bldg:boundedBy/bldg:WallSurface","bldg:boundedBy","bldg:WallSurface")
-#writeToTemplate("bldg:Building/bldg:lod2Solid/gml:Solid","bldg:lod2Solid","bldg:Solid")
-
-#testing
-#for item in output_file:
-#    print(item)
-#    print("\n\n")
+print("Wrote ",writeCount," triples to file.")
 
 
 #writing to file
