@@ -1,6 +1,6 @@
 from lxml import etree
 from io import StringIO, BytesIO
-import re
+import re,sys
 from pathlib import Path
 
 """
@@ -14,6 +14,7 @@ TODO:
     Bugs? gml:MultiSurface ?
 
 """
+output_filename = "output3.xslt"
 
 
 # reading spo-temp file
@@ -79,13 +80,19 @@ output_array=list(output)
 for i in range(len(output_array)):
     print(i,":",output_array[i])
 
-blacklist = input("\nEnter number of triples, which should be skipped (like 5,6,7)").split(",") # getting blacklist from user
+try:
+    blacklist = input("\nEnter number of triples, which should be skipped (like 5,6,7)").split(",") # getting blacklist from user
+    blacklist = sorted(list(map(int,blacklist))) # converting input to int and sort then ascending
+except:
+    print(e)
+    print("Pleas enter a valid number")
+    sys.exit()
 
 print("\n═══ Removing choosen triples ═══")
 removedCount=0 # counter when removing an element
 for i in blacklist:
-    print("removed: ",output_array[int(i)-removedCount])
-    output_array.remove(output_array[int(i)-removedCount])
+    print("removed: ",output_array[i-removedCount])
+    output_array.remove(output_array[i-removedCount])
     removedCount+=1
 
 print("\n═══ Writing to output file ═══")
@@ -107,7 +114,8 @@ for l in range(len(output_template_lines)):
 
 
 #writing to file
-with open('python-spo\output\output3.xslt', 'w') as spo_template:
+path = "python-spo\output\\" + output_filename
+with open(path, 'w') as spo_template:
     for line in output_template_lines:
         line = line.strip() # removing whitespaces
         #print(line) # print out every line, which is written to the file
