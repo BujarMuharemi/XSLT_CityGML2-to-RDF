@@ -10,12 +10,11 @@ This should be possible because XML is a tree structure and thats just a restric
 TODO:    
     - missing ids for objects: gml:MultiSurface   
     - Building>Solid Linkage ? really necessary ?
-
-    Bugs? gml:MultiSurface ?
-
 """
-output_filename = "output3.xslt"
 
+# file output
+path = "python-spo\\output\\auto-generated\\"
+output_filename = "SimpleSolid_base1.xslt"
 
 # reading spo-temp file
 spo_template = open(r'python-spo\templates\spo-temp.xslt', "r")
@@ -114,7 +113,7 @@ for l in range(len(output_template_lines)):
 
 
 #writing to file
-path = "python-spo\output\\" + output_filename
+path = path + output_filename
 with open(path, 'w') as spo_template:
     for line in output_template_lines:
         line = line.strip() # removing whitespaces

@@ -14,7 +14,7 @@
 
   <!-- ROOT entity/subject  -->
   <!-- Change to the root element of your CityGML file  -->  
-  <xsl:template match="ROOT/">
+  <xsl:template match="ROOT">
     <xsl:variable name="id" select="f:slugify(@gml:id)" />
 
     <ROOT rdf:about="{concat('ROOT/', $id)}">
