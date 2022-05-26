@@ -11,25 +11,28 @@ TODO:
     - missing ids for objects: gml:MultiSurface   
     - Building>Solid Linkage ? really necessary ?
 """
-
+##################################################################################################
+# File Parameters
 # file output
 path = "python-spo\\output\\auto-generated\\"
-output_filename = "SimpleSolid_base1.xslt"
+output_filename = "Meilding_one_building_base1.xslt"
 
 # reading spo-temp file
-spo_template = open(r'python-spo\templates\spo-temp.xslt', "r")
+spo_template = open(r'python-spo\\templates\\spo-temp.xslt', "r")
 spo_temp_og_lines = spo_template.readlines() #original template, read from the file
 spo_output_file = []
 
 # blank-output-template
-blank_output_template = open(r'python-spo\templates\blank-output-template.xslt', "r")
+blank_output_template = open(r'python-spo\\templates\\blank-output-template.xslt', "r")
 output_template_lines = blank_output_template.readlines() #original template, read from the file
 
 # reading input gml file
-root = etree.parse(r'gml-simplesolid-test\data\SimpleSolid.gml')
+root = etree.parse(r'python-spo\\input\\Meilding_one_building.gml')
 #root = etree.parse(r'/home/bujar/Documents/_HFT/BA_IDP/Data/Meidling/Meidling_citygml/Meilding_building/Meilding_one_building.gml')
 
 
+##################################################################################################
+# Functions
 # changes the template according to the parameters, so it can later be written to the output flie
 def writeToOutputTemplate(matchingRegex,predicate,object):
     #print("-------",matchingRegex,"\t",predicate,"\t",object)
@@ -49,13 +52,14 @@ def writeToOutputTemplate(matchingRegex,predicate,object):
     #lines=og_lines
     #print(output_file)
 
-############################################################
 
+##################################################################################################
+# Main 
 # getting all paths of the elements
 paths = [root.getpath(d) for d in root.iter()]
 output = set() # set for storing just unique triples
 
-# FIXME: exterior>CompositeSurface>surfaceMember is missing because it has a / length of 8 ?
+# FIXME: exterior>CompositeSurface>surfaceMember is missing because it has a / length of 8 ? @simple solid test
 for e in paths:
     #print(e)
     if(e.count("/")%2!=0 and e.count("/")>1):
@@ -70,17 +74,18 @@ for e in paths:
         #print(e.count("/"),"\t",e)
     #elif(e.count("/")==4): #needs also too look up if this element has any children
         #print("possible attribute:\t",e.count("/"),"\t",e)
+print(output)
 
-
-#showing found triples
+# showing found triples
 print("\n═══ Number of found SPO Triples: ",len(output),"═══")
 output_array=list(output)
 
 for i in range(len(output_array)):
     print(i,":",output_array[i])
 
+# getting input of user, of triples which should be ignored
 try:
-    blacklist = input("\nEnter number of triples, which should be skipped (like 5,6,7)").split(",") # getting blacklist from user
+    blacklist = input("\nEnter number of triples, which should be skipped (like 5,6,7)\n").split(",") # getting blacklist from user
     blacklist = sorted(list(map(int,blacklist))) # converting input to int and sort then ascending
 except:
     print(e)
@@ -110,7 +115,6 @@ ab=''.join(str(item) for innerlist in spo_output_file for item in innerlist)
 for l in range(len(output_template_lines)):
     if re.search(r"\${{spo_temp_output}}", output_template_lines[l]): 
         output_template_lines[l] = ab
-
 
 #writing to file
 path = path + output_filename
