@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bldg:Building xmlns:core="http://www.opengis.net/citygml/2.0"
+               xmlns:gen="http://www.opengis.net/citygml/generics/2.0"
+               xmlns:bldg="http://www.opengis.net/citygml/building/2.0"
+               xmlns:app="http://www.opengis.net/citygml/appearance/2.0"
+               xmlns:dem="http://www.opengis.net/citygml/relief/2.0"
+               xmlns:gml="http://www.opengis.net/gml"
+               xmlns:xlink="http://www.w3.org/1999/xlink"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+               xmlns:f="http://opendata.cz/xslt/functions#"
+               xmlns:schema="http://schema.org/"
+               xmlns:ex="http://example.org/stuff/1.0/"
+               rdf:about="bldg:Building/uuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+   <schema:identifier>uuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+   <bldg:lod2Solid>
+      <gml:Solid rdf:about="gml:Solid/uuid_80616806-ae30-4bea-b4a5-b5c398b7761e">
+         <schema:identifier>gml:Solid.uuid_80616806-ae30-4bea-b4a5-b5c398b7761e</schema:identifier>
+         <gml:exterior>
+            <gml:CompositeSurface rdf:about="gml:CompositeSurface/uuid_6ed07c84-427d-4134-95af-4369a0b3125e">
+               <schema:identifier>gml:CompositeSurface.uuid_6ed07c84-427d-4134-95af-4369a0b3125e</schema:identifier>
+            </gml:CompositeSurface>
+         </gml:exterior>
+      </gml:Solid>
+   </bldg:lod2Solid>
+   <bldg:boundedBy>
+      <bldg:GroundSurface rdf:about="bldg:GroundSurface/uuid_lod2_029646-7a57aa59-6a29-4260-b1ba_f1f51833-c9a8-44fd-b201-c59c03393059">
+         <schema:identifier>bldg:GroundSurface.uuid_lod2_029646-7a57aa59-6a29-4260-b1ba_f1f51833-c9a8-44fd-b201-c59c03393059</schema:identifier>
+         <gen:stringAttribute>
+            <gen:value rdf:about="gen:value/">
+               <schema:identifier>gen:value.</schema:identifier>
+            </gen:value>
+         </gen:stringAttribute>
+         <gen:stringAttribute>
+            <gen:value rdf:about="gen:value/">
+               <schema:identifier>gen:value.</schema:identifier>
+            </gen:value>
+         </gen:stringAttribute>
+         <bldg:lod2MultiSurface>
+            <gml:MultiSurface rdf:about="gml:MultiSurface/multi_surf_uuid_77b698b9-6eea-4c56-99b5-a89dfa1205b8">
+               <schema:identifier>gml:MultiSurface.multi_surf_uuid_77b698b9-6eea-4c56-99b5-a89dfa1205b8</schema:identifier>
+               <gml:surfaceMember>
+                  <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_61d1e6cf-5113-4b68-a70d-aef46b8df6dd">
+                     <schema:identifier>gml:Polygon.polygon_uuid_61d1e6cf-5113-4b68-a70d-aef46b8df6dd</schema:identifier>
+                  </gml:Polygon>
+               </gml:surfaceMember>
+            </gml:MultiSurface>
+         </bldg:lod2MultiSurface>
+      </bldg:GroundSurface>
+   </bldg:boundedBy>
+   <bldg:boundedBy>
+      <bldg:RoofSurface rdf:about="bldg:RoofSurface/uuid_lod2_029646-7a57aa59-6a29-4260-b1ba_66b1fcc6-e069-4805-88dd-dcca50ddd778">
+         <schema:identifier>bldg:RoofSurface.uuid_lod2_029646-7a57aa59-6a29-4260-b1ba_66b1fcc6-e069-4805-88dd-dcca50ddd778</schema:identifier>
+         <gen:stringAttribute>
+            <gen:value rdf:about="gen:value/">
+               <schema:identifier>gen:value.</schema:identifier>
+            </gen:value>
+         </gen:stringAttribute>
+         <gen:stringAttribute>
+            <gen:value rdf:about="gen:value/">
+               <schema:identifier>gen:value.</schema:identifier>
+            </gen:value>
+         </gen:stringAttribute>
+         <gen:stringAttribute>
+            <gen:value rdf:about="gen:value/">
+               <schema:identifier>gen:value.</schema:identifier>
+            </gen:value>
+         </gen:stringAttribute>
+         <gen:stringAttribute>
+            <gen:value rdf:about="gen:value/">
+               <schema:identifier>gen:value.</schema:identifier>
+            </gen:value>
+         </gen:stringAttribute>
+         <gen:stringAttribute>
+            <gen:value rdf:about="gen:value/">
+               <schema:identifier>gen:value.</schema:identifier>
+            </gen:value>
+         </gen:stringAttribute>
+         <gml:surfaceMember>
+            <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_5779fff8-8fa1-409e-8dea-603181024211">
+               <schema:identifier>gml:Polygon.polygon_uuid_5779fff8-8fa1-409e-8dea-603181024211</schema:identifier>
+            </gml:Polygon>
+         </gml:surfaceMember>
+      </bldg:RoofSurface>
+   </bldg:boundedBy>
+   <bldg:boundedBy>
+      <bldg:WallSurface rdf:about="bldg:WallSurface/uuid_lod2_029646-7a57aa59-6a29-4260-b1ba_7c41975f-1cc8-4d48-8f73-d9def834525e">
+         <schema:identifier>bldg:WallSurface.uuid_lod2_029646-7a57aa59-6a29-4260-b1ba_7c41975f-1cc8-4d48-8f73-d9def834525e</schema:identifier>
+         <gen:stringAttribute>
+            <gen:value rdf:about="gen:value/">
+               <schema:identifier>gen:value.</schema:identifier>
+            </gen:value>
+         </gen:stringAttribute>
+         <gml:surfaceMember>
+            <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_7680a365-d295-4e3a-b3bd-0202c58ec02b">
+               <schema:identifier>gml:Polygon.polygon_uuid_7680a365-d295-4e3a-b3bd-0202c58ec02b</schema:identifier>
+            </gml:Polygon>
+         </gml:surfaceMember>
+      </bldg:WallSurface>
+   </bldg:boundedBy>
+   <bldg:boundedBy>
+      <bldg:WallSurface rdf:about="bldg:WallSurface/uuid_lod2_029646-7a57aa59-6a29-4260-b1ba_675a3501-72bf-4460-8f16-04245600eb42">
+         <schema:identifier>bldg:WallSurface.uuid_lod2_029646-7a57aa59-6a29-4260-b1ba_675a3501-72bf-4460-8f16-04245600eb42</schema:identifier>
+         <gen:stringAttribute>
+            <gen:value rdf:about="gen:value/">
+               <schema:identifier>gen:value.</schema:identifier>
+            </gen:value>
+         </gen:stringAttribute>
+         <gml:surfaceMember>
+            <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_09afb206-da5e-428c-90ea-492891064b1d">
+               <schema:identifier>gml:Polygon.polygon_uuid_09afb206-da5e-428c-90ea-492891064b1d</schema:identifier>
+            </gml:Polygon>
+         </gml:surfaceMember>
+      </bldg:WallSurface>
+   </bldg:boundedBy>
+   <bldg:boundedBy>
+      <bldg:WallSurface rdf:about="bldg:WallSurface/uuid_lod2_029646-7a57aa59-6a29-4260-b1ba_3bd64c17-7954-43a4-9734-fa3618055cca">
+         <schema:identifier>bldg:WallSurface.uuid_lod2_029646-7a57aa59-6a29-4260-b1ba_3bd64c17-7954-43a4-9734-fa3618055cca</schema:identifier>
+         <gen:stringAttribute>
+            <gen:value rdf:about="gen:value/">
+               <schema:identifier>gen:value.</schema:identifier>
+            </gen:value>
+         </gen:stringAttribute>
+         <gml:surfaceMember>
+            <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_7d23e148-0899-4762-87c9-5f7b9d5e0b90">
+               <schema:identifier>gml:Polygon.polygon_uuid_7d23e148-0899-4762-87c9-5f7b9d5e0b90</schema:identifier>
+            </gml:Polygon>
+         </gml:surfaceMember>
+      </bldg:WallSurface>
+   </bldg:boundedBy>
+   <bldg:boundedBy>
+      <bldg:WallSurface rdf:about="bldg:WallSurface/uuid_lod2_029646-7a57aa59-6a29-4260-b1ba_5181ae13-6210-4e49-ae72-9e3b7f352f61">
+         <schema:identifier>bldg:WallSurface.uuid_lod2_029646-7a57aa59-6a29-4260-b1ba_5181ae13-6210-4e49-ae72-9e3b7f352f61</schema:identifier>
+         <gen:stringAttribute>
+            <gen:value rdf:about="gen:value/">
+               <schema:identifier>gen:value.</schema:identifier>
+            </gen:value>
+         </gen:stringAttribute>
+         <gml:surfaceMember>
+            <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_0c6b6470-bb45-40e7-806b-689bfdb8b28e">
+               <schema:identifier>gml:Polygon.polygon_uuid_0c6b6470-bb45-40e7-806b-689bfdb8b28e</schema:identifier>
+            </gml:Polygon>
+         </gml:surfaceMember>
+      </bldg:WallSurface>
+   </bldg:boundedBy>
+</bldg:Building>
