@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:core="http://www.opengis.net/citygml/2.0" xmlns:gen="http://www.opengis.net/citygml/generics/2.0" xmlns:bldg="http://www.opengis.net/citygml/building/2.0" xmlns:app="http://www.opengis.net/citygml/appearance/2.0" xmlns:dem="http://www.opengis.net/citygml/relief/2.0" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:f="http://opendata.cz/xslt/functions#" xmlns:schema="http://schema.org/" xsi:schemaLocation="http://www.opengis.net/citygml/building/2.0 http://schemas.opengis.net/citygml/building/2.0/building.xsd http://www.opengis.net/citygml/appearance/2.0 http://schemas.opengis.net/citygml/appearance/2.0/appearance.xsd http://www.opengis.net/citygml/relief/2.0 http://schemas.opengis.net/citygml/relief/2.0/relief.xsd http://www.opengis.net/citygml/2.0 http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd http://www.opengis.net/citygml/generics/2.0 http://schemas.opengis.net/citygml/generics/2.0/generics.xsd" xmlns:ex="http://example.org/stuff/1.0/">
+<xsl:stylesheet version="2.0"  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:core="http://www.opengis.net/citygml/2.0" xmlns:gen="http://www.opengis.net/citygml/generics/2.0" xmlns:bldg="http://www.opengis.net/citygml/building/2.0" xmlns:app="http://www.opengis.net/citygml/appearance/2.0" xmlns:dem="http://www.opengis.net/citygml/relief/2.0" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:f="http://opendata.cz/xslt/functions#" xmlns:schema="http://schema.org/" xsi:schemaLocation="http://www.opengis.net/citygml/building/2.0 http://schemas.opengis.net/citygml/building/2.0/building.xsd http://www.opengis.net/citygml/appearance/2.0 http://schemas.opengis.net/citygml/appearance/2.0/appearance.xsd http://www.opengis.net/citygml/relief/2.0 http://schemas.opengis.net/citygml/relief/2.0/relief.xsd http://www.opengis.net/citygml/2.0 http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd http://www.opengis.net/citygml/generics/2.0 http://schemas.opengis.net/citygml/generics/2.0/generics.xsd" xmlns:ex="http://example.org/stuff/1.0/">
 
 <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes" normalization-form="NFC" />
 <xsl:strip-space elements="*" />
@@ -117,43 +117,6 @@
     </bldg:boundedBy>
   </xsl:template>
 
-<!-- auto generate - Predicate:gen:stringAttribute  -->
-<!-- auto generate - Object:gen:value  -->
-  <!-- <xsl:template match="bldg:WallSurface/gen:stringAttribute/gen:value">  
-    <xsl:variable name="id" select="f:slugify(@gml:id)" />
-
-    <gen:stringAttribute>
-      <gen:value rdf:about="{concat('gen:value/', $id)}">
-        <schema:identifier>
-          <xsl:value-of select="concat('gen:value.',$id)" />          
-        </schema:identifier>
-
-        <xsl:apply-templates>
-          <xsl:with-param name="id" select="$id" tunnel="yes" />
-        </xsl:apply-templates>
-
-      </gen:value>
-    </gen:stringAttribute>
-  </xsl:template> -->
-
-<!-- auto generate - Predicate:gen:stringAttribute  -->
-<!-- auto generate - Object:gen:value  -->
-  <!-- <xsl:template match="bldg:RoofSurface/gen:stringAttribute/gen:value">  
-    <xsl:variable name="id" select="f:slugify(@gml:id)" />
-
-    <gen:stringAttribute>
-      <gen:value rdf:about="{concat('gen:value/', $id)}">
-        <schema:identifier>
-          <xsl:value-of select="concat('gen:value.',$id)" />          
-        </schema:identifier>
-
-        <xsl:apply-templates>
-          <xsl:with-param name="id" select="$id" tunnel="yes" />
-        </xsl:apply-templates>
-
-      </gen:value>
-    </gen:stringAttribute>
-  </xsl:template> -->
 
 <!-- auto generate - Predicate:gml:exterior  -->
 <!-- auto generate - Object:gml:CompositeSurface  -->
@@ -195,22 +158,33 @@
 
 <!-- auto generate - Predicate:gen:stringAttribute  -->
 <!-- auto generate - Object:gen:value  -->
-  <!-- <xsl:template match="bldg:GroundSurface/gen:stringAttribute/gen:value">  
-    <xsl:variable name="id" select="f:slugify(@gml:id)" />
+<!-- edited  -->
+  <xsl:template match="gen:stringAttribute/gen:value">  
+    <xsl:variable name="name" select="concat('gen:stringAttribute.',f:slugify(../@name))" />
+    <xsl:variable name="value" select="."/>
+    
+    <ex:has>
+      <gen:stringAttribute rdf:about="{$name}"> 
+          <!-- <ex:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            <xsl:value-of select="concat('gen:value.',$id)" />    
+            <xsl:value-of select="$name"/>       
+          </ex:name> -->
 
-    <gen:stringAttribute>
-      <gen:value rdf:about="{concat('gen:value/', $id)}">
-        <schema:identifier>
-          <xsl:value-of select="concat('gen:value.',$id)" />          
-        </schema:identifier>
+          <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            <xsl:value-of select="$value"/>     
+          </gen:value>   
+          
+          <schema:identifier>
+            <xsl:value-of select="$name" />          
+          </schema:identifier>
 
-        <xsl:apply-templates>
-          <xsl:with-param name="id" select="$id" tunnel="yes" />
-        </xsl:apply-templates>
-
-      </gen:value>
-    </gen:stringAttribute>
-  </xsl:template> -->
+          <xsl:apply-templates>
+            <xsl:with-param name="name" select="$name" tunnel="yes" />
+            <xsl:with-param name="value" select="$name" tunnel="yes" />
+          </xsl:apply-templates>        
+      </gen:stringAttribute> 
+    </ex:has>
+  </xsl:template>
 
 <!-- auto generate - Predicate:gml:surfaceMember  -->
 <!-- auto generate - Object:gml:Polygon  -->

@@ -16,8 +16,10 @@ This part of the projects contains a python script for generating a XSLT templat
 
 
 ## Stept/Tutorial
+//How to use it etc
+
 ## Results
-Two datasets were tested with the script. For once the SimpleSolid bulding from the previous test and also one building from the Meilding dataset.
+Two datasets were tested with the script. For once the SimpleSolid building from the previous test and also one building from the Meidling dataset.
 
 ### Simple Solid test
 First graph, where just the root node was added. 
