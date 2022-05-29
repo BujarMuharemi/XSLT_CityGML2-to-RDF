@@ -25,5 +25,5 @@ Two datasets were tested with the script. For once the SimpleSolid building from
 First graph, where just the root node was added. 
 [First Graph](./graph-images/SimpleSolid_base1_edited.svg) .
 
-[First Graph](./graph-images/SimpleSolid_base2_edited.svg) .
+[Second Graph](./graph-images/SimpleSolid_base2_edited.svg) .
 
