@@ -15,7 +15,7 @@ TODO:
 # File Parameters
 # file output
 path = "python-spo\\output\\auto-generated\\"
-output_filename = "Meilding_one_building_base1.xslt"
+output_filename = "Meilding_one_building_base1.1.xslt"
 
 # reading spo-temp file
 spo_template = open(r'python-spo\\templates\\spo-temp.xslt', "r")
@@ -27,7 +27,7 @@ blank_output_template = open(r'python-spo\\templates\\blank-output-template.xslt
 output_template_lines = blank_output_template.readlines() #original template, read from the file
 
 # reading input gml file
-root = etree.parse(r'python-spo\\input\\Meilding_one_building.gml')
+root = etree.parse(r'python-spo\\input\\Meidling_one_building.gml')
 #root = etree.parse(r'/home/bujar/Documents/_HFT/BA_IDP/Data/Meidling/Meidling_citygml/Meilding_building/Meilding_one_building.gml')
 
 
