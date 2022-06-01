@@ -1,4 +1,16 @@
 # Scratchpad for queries
+
+# counts all surfaces of each building
+PREFIX bld: <http://biglinkeddata.com/>
+PREFIX bl: <https://w3id.org/biolink/vocab/>
+PREFIX bldg:   <http://www.opengis.net/citygml/building/2.0> 
+
+SELECT ?building  (COUNT(?surface) as ?n_surfaces )
+WHERE {
+  ?building <http://www.opengis.net/citygml/building/2.0boundedBy> ?surface .
+}GROUP BY ?building
+
+
 '''
 PREFIX bld: <http://biglinkeddata.com/>
 PREFIX bl: <https://w3id.org/biolink/vocab/>
@@ -39,4 +51,6 @@ WHERE {
 }#GROUP BY ?a
 
  
+ 
+
 
