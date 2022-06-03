@@ -1,6 +1,6 @@
 # Scratchpad for queries
 
-# counts all surfaces of each building
+#>>>counts all surfaces of each building
 PREFIX bld: <http://biglinkeddata.com/>
 PREFIX bl: <https://w3id.org/biolink/vocab/>
 PREFIX bldg:   <http://www.opengis.net/citygml/building/2.0> 
@@ -11,7 +11,49 @@ WHERE {
 }GROUP BY ?building
 
 
+#>>>counts all multisurfaces of each buliding
+PREFIX bld: <http://biglinkeddata.com/>
+PREFIX bl: <https://w3id.org/biolink/vocab/>
+PREFIX bldg:   <http://www.opengis.net/citygml/building/2.0> 
+
+SELECT ?b  (COUNT(?multisurface) as ?n_multisurfaces )
+WHERE {
+  #?building <http://www.opengis.net/citygml/building/2.0boundedBy> ?surface .
+  #?s <http://www.opengis.net/citygml/2.0cityObjectMember> ?building ;
+  ?b <http://www.opengis.net/citygml/building/2.0lod2MultiSurface> ?multisurface .
+}GROUP BY ?b
+
+
+#getting the wall surfaces of each buliding
+PREFIX bld: <http://biglinkeddata.com/>
+PREFIX bl: <https://w3id.org/biolink/vocab/>
+PREFIX bldg:   <http://www.opengis.net/citygml/building/2.0> 
+
+SELECT ?building  (COUNT(?wall_surface) as ?n_wall_surface )
+WHERE {
+  ?building <http://www.opengis.net/citygml/building/2.0boundedBy> ?wall_surface .
+  filter( regex(str(?wall_surface), "WallSurface" ))
+   
+}GROUP BY ?building
+
+
+#>>> counts Wall-,Ground-,RoofSurfaces of each building
+PREFIX bld: <http://biglinkeddata.com/>
+PREFIX bl: <https://w3id.org/biolink/vocab/>
+PREFIX bldg:   <http://www.opengis.net/citygml/building/2.0> 
+
+SELECT ?building   (Sum(if(contains(str(?wall_surface),"Wall"), 1, 0)) as ?n_wall_surface) (Sum(if(contains(str(?wall_surface),"Roof"), 1, 0)) as ?n_roof_surface) (Sum(if(contains(str(?wall_surface),"Ground"), 1, 0)) as ?n_ground_surface) 
+
+WHERE {
+  ?building <http://www.opengis.net/citygml/building/2.0boundedBy> ?wall_surface .
+}
+GROUP BY ?building
+ORDER BY DESC(?n_wall_surface)
+
+
+
 '''
+# Draft after here
 PREFIX bld: <http://biglinkeddata.com/>
 PREFIX bl: <https://w3id.org/biolink/vocab/>
 PREFIX bldg:   <http://www.opengis.net/citygml/building/2.0> 
