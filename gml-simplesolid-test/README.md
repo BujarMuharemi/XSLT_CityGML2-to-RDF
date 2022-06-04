@@ -3,6 +3,18 @@ This test ist based on the previous *gml-mini-test*.
 
 In the subfolders you can find the input/output data, resulting graph images and the json file for importing into the ETL pipeline.
 
+## CityGML2 source file
+The CityGML2 file which was used in this test, can be found in this [Repository](https://gitlab.com/volkercoors/CiD4Sim/-/blob/master/SimpleSolid_SrefBS/v2.0/SimpleSolid_SrefBS.gml). It was renamed to *SimpleSolid.gml*.
+
+The rendered house looks like this:
+<p align="center">
+    <img src="https://gitlab.com/volkercoors/CiD4Sim/raw/master/SimpleSolid_SrefBS/figures/Testgebaeude.png?inline=true " width="360">
+</p>
+
+## Pipeline setup
+Architecture of the the pipeline for the the final test.
+![](./etl-pipeline/etl-architecture.png)
+
 
 ## graph visualization 
 The following pictures show the different stages of the graph.
