@@ -1,6 +1,13 @@
-# Scratchpad for queries
+# Scratchpad for SPARQL queries
 
-#>>>counts all surfaces of each building
+# get all buildings 
+SELECT ?o 
+WHERE {
+  <core:CityModel/> ?p ?o .  
+  FILTER regex(str(?o), "Building", "i") 
+}
+
+# counts all surfaces of each building
 PREFIX bld: <http://biglinkeddata.com/>
 PREFIX bl: <https://w3id.org/biolink/vocab/>
 PREFIX bldg:   <http://www.opengis.net/citygml/building/2.0> 
@@ -11,7 +18,7 @@ WHERE {
 }GROUP BY ?building
 
 
-#>>>counts all multisurfaces of each buliding
+# counts all multisurfaces of each buliding
 PREFIX bld: <http://biglinkeddata.com/>
 PREFIX bl: <https://w3id.org/biolink/vocab/>
 PREFIX bldg:   <http://www.opengis.net/citygml/building/2.0> 
@@ -24,7 +31,7 @@ WHERE {
 }GROUP BY ?b
 
 
-#getting the wall surfaces of each buliding
+# getting the wall surfaces of each buliding
 PREFIX bld: <http://biglinkeddata.com/>
 PREFIX bl: <https://w3id.org/biolink/vocab/>
 PREFIX bldg:   <http://www.opengis.net/citygml/building/2.0> 
@@ -37,7 +44,7 @@ WHERE {
 }GROUP BY ?building
 
 
-#>>> counts Wall-,Ground-,RoofSurfaces of each building
+# counts Wall-,Ground-,RoofSurfaces of each building
 PREFIX bld: <http://biglinkeddata.com/>
 PREFIX bl: <https://w3id.org/biolink/vocab/>
 PREFIX bldg:   <http://www.opengis.net/citygml/building/2.0> 
@@ -50,6 +57,28 @@ WHERE {
 GROUP BY ?building
 ORDER BY DESC(?n_wall_surface)
 
+
+# get all attributes of a building
+PREFIX bldg:	<http://www.opengis.net/citygml/building/2.0> 
+PREFIX ex:	<http://example.org/stuff/1.0/>
+PREFIX gen: <http://www.opengis.net/citygml/generics/2.0>
+
+SELECT ?building  ?ex_has ?value
+WHERE {
+  ?building <http://example.org/stuff/1.0/has> ?ex_has .
+  ?ex_has gen:value ?value .
+}
+
+
+# filter attributes by regex
+PREFIX gen: <http://www.opengis.net/citygml/generics/2.0>
+
+SELECT ?building  ?ex_has ?value
+WHERE {
+  ?building <http://example.org/stuff/1.0/has> ?ex_has .
+  ?ex_has gen:value ?value .
+  FILTER regex(str(?ex_has), "heatingDemandValue_s1", "i") 
+}
 
 
 '''
