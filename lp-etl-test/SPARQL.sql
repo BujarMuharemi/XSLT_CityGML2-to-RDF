@@ -1,11 +1,14 @@
 # Scratchpad for SPARQL queries
 
 # get all buildings 
+PREFIX core: <http://www.opengis.net/citygml/2.0>
+
 SELECT ?o 
 WHERE {
   <core:CityModel/> ?p ?o .  
   FILTER regex(str(?o), "Building", "i") 
 }
+# returns 82 buildings
 
 # counts all surfaces of each building
 PREFIX bld: <http://biglinkeddata.com/>
@@ -69,6 +72,19 @@ WHERE {
   ?ex_has gen:value ?value .
 }
 
+# counts the number of attributes of each building
+PREFIX core: <http://www.opengis.net/citygml/2.0>
+
+SELECT ?building (count(?ex_has) as ?count)
+WHERE {
+  <core:CityModel/> ?p ?building .  
+  FILTER regex(str(?building), "Building", "i") 
+  ?building <http://example.org/stuff/1.0/has> ?ex_has .
+  
+}
+GROUP BY ?building
+ORDER BY DESC(?count)
+
 
 # filter attributes by regex
 PREFIX gen: <http://www.opengis.net/citygml/generics/2.0>
@@ -79,6 +95,23 @@ WHERE {
   ?ex_has gen:value ?value .
   FILTER regex(str(?ex_has), "heatingDemandValue_s1", "i") 
 }
+
+# just returns 44 building. This means some buildings, miss this attribute. 
+
+
+# calculates average heatingDemandValue_s1 an shows the corresponding surfaces
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX gen: <http://www.opengis.net/citygml/generics/2.0>
+
+SELECT ?building (AVG(xsd:float(?value)) as ?avg) (Sum(if(contains(str(?wall_surface),"Wall"), 1, 0)) as ?n_wall_surface) (Sum(if(contains(str(?wall_surface),"Roof"), 1, 0)) as ?n_roof_surface) (Sum(if(contains(str(?wall_surface),"Ground"), 1, 0)) as ?n_ground_surface) 
+
+WHERE {
+  ?building <http://example.org/stuff/1.0/has> ?ex_has .
+  ?ex_has gen:value ?value .
+  FILTER regex(str(?ex_has), "heatingDemandValue_s1", "i") 
+  ?building <http://www.opengis.net/citygml/building/2.0boundedBy> ?wall_surface .
+}
+GROUP BY ?building
 
 
 '''
