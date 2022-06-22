@@ -87,14 +87,14 @@ ORDER BY DESC(?count)
 
 
 # filter attributes by regex
-PREFIX gen: <http://www.opengis.net/citygml/generics/2.0>
+  PREFIX gen: <http://www.opengis.net/citygml/generics/2.0>
 
-SELECT ?building  ?ex_has ?value
-WHERE {
-  ?building <http://example.org/stuff/1.0/has> ?ex_has .
-  ?ex_has gen:value ?value .
-  FILTER regex(str(?ex_has), "heatingDemandValue_s1", "i") 
-}
+  SELECT ?building  ?ex_has ?value
+  WHERE {
+    ?building <http://example.org/stuff/1.0/has> ?ex_has .
+    ?ex_has gen:value ?value .
+    FILTER regex(str(?ex_has), "heatingDemandValue_s1", "i") 
+  }
 
 # just returns 44 building. This means some buildings, miss this attribute. 
 
@@ -113,8 +113,51 @@ WHERE {
 }
 GROUP BY ?building
 
+# calculates heatingDemandValue and footprinArea
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX gen: <http://www.opengis.net/citygml/generics/2.0>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX gen: <http://www.opengis.net/citygml/generics/2.0>
+
+SELECT ?building (AVG(xsd:float(?value)) as ?heatingDemandValue) (AVG(xsd:float(?value1)) as ?FootPrintArea) (Sum(if(contains(str(?wall_surface),"Wall"), 1, 0)) as ?n_wall_surface) (Sum(if(contains(str(?wall_surface),"Roof"), 1, 0)) as ?n_roof_surface) (Sum(if(contains(str(?wall_surface),"Ground"), 1, 0)) as ?n_ground_surface) 
+
+WHERE {
+  ?building <http://example.org/stuff/1.0/has> ?ex_has .
+  FILTER regex(str(?ex_has), "heatingDemandValue_s1", "i") 
+  ?ex_has gen:value ?value . 
+  
+  ?building <http://example.org/stuff/1.0/has> ?ex_has1 .
+  FILTER regex(str(?ex_has1), "footprintArea", "i") 
+  ?ex_has1 gen:value ?value1 . 
+  
+  ?building <http://www.opengis.net/citygml/building/2.0boundedBy> ?wall_surface .
+}
+GROUP BY ?building
+
 
 '''
+# union
+PREFIX bld: <http://biglinkeddata.com/>
+PREFIX bl: <https://w3id.org/biolink/vocab/>
+PREFIX bldg:   <http://www.opengis.net/citygml/building/2.0> 
+PREFIX gen: <http://www.opengis.net/citygml/generics/2.0>
+
+SELECT ?building ?value ?value_e
+{
+  {
+    ?building <http://example.org/stuff/1.0/has> ?ex_has .
+    ?ex_has gen:value ?value_e .
+    FILTER regex(str(?ex_has), "primaryEnergyDemandClass", "i") 
+
+    #FILTER regex(str(?building), "d53e2acb", "i") 
+  } union
+  {
+    ?building <http://example.org/stuff/1.0/has> ?ex_has .
+    ?ex_has gen:value ?value .
+    FILTER regex(str(?ex_has), "footprintArea", "i") 
+  }
+}
+
 # Draft after here
 PREFIX bld: <http://biglinkeddata.com/>
 PREFIX bl: <https://w3id.org/biolink/vocab/>
