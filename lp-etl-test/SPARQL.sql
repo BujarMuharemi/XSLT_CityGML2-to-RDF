@@ -113,7 +113,7 @@ WHERE {
 }
 GROUP BY ?building
 
-# calculates heatingDemandValue and footprinArea
+# calculates heatingDemandValue,footprinArea and shows the different surfaces
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX gen: <http://www.opengis.net/citygml/generics/2.0>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
