@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:core="http://www.opengis.net/citygml/2.0"
+         xmlns:gen="http://www.opengis.net/citygml/generics/2.0"
+         xmlns:bldg="http://www.opengis.net/citygml/building/2.0"
+         xmlns:app="http://www.opengis.net/citygml/appearance/2.0"
+         xmlns:dem="http://www.opengis.net/citygml/relief/2.0"
+         xmlns:gml="http://www.opengis.net/gml"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:f="http://opendata.cz/xslt/functions#"
+         xmlns:schema="http://schema.org/"
+         xmlns:ex="http://example.org/stuff/1.0/">
+   <core:CityModel rdf:about="core:CityModel/">
+      <schema:identifier/>
+      <core:cityObjectMember>
+         <bldg:Building rdf:about="bldg:Building/uuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+            <schema:identifier>bldg:Building.uuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute._part_numberuuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gen:value>
+                  <schema:identifier>gen:stringAttribute._part_numberuuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute._geometry_nameuuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">surfaceMember</gen:value>
+                  <schema:identifier>gen:stringAttribute._geometry_nameuuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.areauuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22.222</gen:value>
+                  <schema:identifier>gen:stringAttribute.areauuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.xlink_hrefuuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#polygon_uuid_61d1e6cf-5113-4b68-a70d-aef46b8df6dd</gen:value>
+                  <schema:identifier>gen:stringAttribute.xlink_hrefuuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.tile_nameuuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">098073</gen:value>
+                  <schema:identifier>gen:stringAttribute.tile_nameuuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.soilThermalConductivity_200m_labeluuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">durchschnittliche konduktive Wärmeleitfähigkeit (1.8-1.99 W/m/K)</gen:value>
+                  <schema:identifier>gen:stringAttribute.soilThermalConductivity_200m_labeluuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.soilThermalConductivity_200m_classuuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</gen:value>
+                  <schema:identifier>gen:stringAttribute.soilThermalConductivity_200m_classuuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.soilThermalConductivity_200muuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.850032</gen:value>
+                  <schema:identifier>gen:stringAttribute.soilThermalConductivity_200muuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.soilThermalConductivity_100m_labeluuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">durchschnittliche konduktive Wärmeleitfähigkeit (1.8-1.99 W/m/K)</gen:value>
+                  <schema:identifier>gen:stringAttribute.soilThermalConductivity_100m_labeluuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.soilThermalConductivity_100m_classuuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</gen:value>
+                  <schema:identifier>gen:stringAttribute.soilThermalConductivity_100m_classuuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.soilThermalConductivity_100muuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.912865</gen:value>
+                  <schema:identifier>gen:stringAttribute.soilThermalConductivity_100muuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.soilThermalConductivity_30m_labeluuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">durchschnittliche konduktive Wärmeleitfähigkeit (1.8-1.99 W/m/K)</gen:value>
+                  <schema:identifier>gen:stringAttribute.soilThermalConductivity_30m_labeluuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.soilThermalConductivity_30m_classuuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</gen:value>
+                  <schema:identifier>gen:stringAttribute.soilThermalConductivity_30m_classuuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.soilThermalConductivity_30muuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.946477</gen:value>
+                  <schema:identifier>gen:stringAttribute.soilThermalConductivity_30muuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.soilThermalConductivity_10m_labeluuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">durchschnittliche konduktive Wärmeleitfähigkeit (1.8-1.99 W/m/K)</gen:value>
+                  <schema:identifier>gen:stringAttribute.soilThermalConductivity_10m_labeluuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.soilThermalConductivity_10m_classuuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</gen:value>
+                  <schema:identifier>gen:stringAttribute.soilThermalConductivity_10m_classuuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.soilThermalConductivity_10muuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.922954</gen:value>
+                  <schema:identifier>gen:stringAttribute.soilThermalConductivity_10muuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.roofHeightuuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">220.68</gen:value>
+                  <schema:identifier>gen:stringAttribute.roofHeightuuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.nrg_epc_primaryEnergyDemandClass_s1uuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</gen:value>
+                  <schema:identifier>gen:stringAttribute.nrg_epc_primaryEnergyDemandClass_s1uuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.nrg_epc_primaryEnergyDemandClassuuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</gen:value>
+                  <schema:identifier>gen:stringAttribute.nrg_epc_primaryEnergyDemandClassuuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.nrg_epc_heatingDemandClass_s1uuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</gen:value>
+                  <schema:identifier>gen:stringAttribute.nrg_epc_heatingDemandClass_s1uuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.nrg_epc_heatingDemandClassuuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</gen:value>
+                  <schema:identifier>gen:stringAttribute.nrg_epc_heatingDemandClassuuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.nrg_epc_co2EmissionsClass_s1uuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</gen:value>
+                  <schema:identifier>gen:stringAttribute.nrg_epc_co2EmissionsClass_s1uuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.nrg_epc_co2EmissionsClassuuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</gen:value>
+                  <schema:identifier>gen:stringAttribute.nrg_epc_co2EmissionsClassuuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.lowestRaingutterHeightuuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">220.68</gen:value>
+                  <schema:identifier>gen:stringAttribute.lowestRaingutterHeightuuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.lod2Volumeuuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">79.687</gen:value>
+                  <schema:identifier>gen:stringAttribute.lod2Volumeuuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.lod1Volumeuuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">66.776</gen:value>
+                  <schema:identifier>gen:stringAttribute.lod1Volumeuuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.heatPumpAuthorisationuuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bewilligungspflicht</gen:value>
+                  <schema:identifier>gen:stringAttribute.heatPumpAuthorisationuuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.groundwaterThermalPotential_labeluuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1 kW bis &lt; 5 kW</gen:value>
+                  <schema:identifier>gen:stringAttribute.groundwaterThermalPotential_labeluuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.groundwaterThermalPotential_infouuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Betrieb von Kleinanlagen nach Prüfung der lokalen Verhältnisse möglich.</gen:value>
+                  <schema:identifier>gen:stringAttribute.groundwaterThermalPotential_infouuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.groundwaterThermalPotential_classuuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</gen:value>
+                  <schema:identifier>gen:stringAttribute.groundwaterThermalPotential_classuuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.groundHeightuuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">217.68</gen:value>
+                  <schema:identifier>gen:stringAttribute.groundHeightuuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.footprintHeightuuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">217.475</gen:value>
+                  <schema:identifier>gen:stringAttribute.footprintHeightuuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.footprintAreauuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22.22</gen:value>
+                  <schema:identifier>gen:stringAttribute.footprintAreauuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.districtuuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</gen:value>
+                  <schema:identifier>gen:stringAttribute.districtuuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.blockuuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12081001</gen:value>
+                  <schema:identifier>gen:stringAttribute.blockuuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.bezuguuid_209ac87e-4fbb-47ca-b529-204fe730ff56">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">029646</gen:value>
+                  <schema:identifier>gen:stringAttribute.bezuguuid_209ac87e-4fbb-47ca-b529-204fe730ff56</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <bldg:lod2Solid>
+               <gml:Solid rdf:about="gml:Solid/uuid_80616806-ae30-4bea-b4a5-b5c398b7761e">
+                  <schema:identifier>gml:Solid.uuid_80616806-ae30-4bea-b4a5-b5c398b7761e</schema:identifier>
+                  <gml:exterior>
+                     <gml:CompositeSurface rdf:about="gml:CompositeSurface/uuid_6ed07c84-427d-4134-95af-4369a0b3125e">
+                        <schema:identifier>gml:CompositeSurface.uuid_6ed07c84-427d-4134-95af-4369a0b3125e</schema:identifier>
+                        <gml:surfaceMember>
+                           <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_0c6b6470-bb45-40e7-806b-689bfdb8b28e"/>
+                        </gml:surfaceMember>
+                        <gml:surfaceMember>
+                           <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_7d23e148-0899-4762-87c9-5f7b9d5e0b90"/>
+                        </gml:surfaceMember>
+                        <gml:surfaceMember>
+                           <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_09afb206-da5e-428c-90ea-492891064b1d"/>
+                        </gml:surfaceMember>
+                        <gml:surfaceMember>
+                           <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_7680a365-d295-4e3a-b3bd-0202c58ec02b"/>
+                        </gml:surfaceMember>
+                        <gml:surfaceMember>
+                           <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_5779fff8-8fa1-409e-8dea-603181024211"/>
+                        </gml:surfaceMember>
+                        <gml:surfaceMember>
+                           <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_61d1e6cf-5113-4b68-a70d-aef46b8df6dd"/>
+                        </gml:surfaceMember>
+                     </gml:CompositeSurface>
+                  </gml:exterior>
+               </gml:Solid>
+            </bldg:lod2Solid>
+            <bldg:boundedBy>
+               <bldg:GroundSurface rdf:about="bldg:GroundSurface/uuid_lod2_029646-7a57aa59-6a29-4260-b1ba_f1f51833-c9a8-44fd-b201-c59c03393059">
+                  <schema:identifier>bldg:GroundSurface.uuid_lod2_029646-7a57aa59-6a29-4260-b1ba_f1f51833-c9a8-44fd-b201-c59c03393059</schema:identifier>
+                  <ex:has>
+                     <gen:stringAttribute rdf:about="gen:stringAttribute.groundHeightuuid_lod2_029646-7a57aa59-6a29-4260-b1ba_f1f51833-c9a8-44fd-b201-c59c03393059">
+                        <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">217.475</gen:value>
+                        <schema:identifier>gen:stringAttribute.groundHeightuuid_lod2_029646-7a57aa59-6a29-4260-b1ba_f1f51833-c9a8-44fd-b201-c59c03393059</schema:identifier>
+                     </gen:stringAttribute>
+                  </ex:has>
+                  <ex:has>
+                     <gen:stringAttribute rdf:about="gen:stringAttribute.areauuid_lod2_029646-7a57aa59-6a29-4260-b1ba_f1f51833-c9a8-44fd-b201-c59c03393059">
+                        <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22.222</gen:value>
+                        <schema:identifier>gen:stringAttribute.areauuid_lod2_029646-7a57aa59-6a29-4260-b1ba_f1f51833-c9a8-44fd-b201-c59c03393059</schema:identifier>
+                     </gen:stringAttribute>
+                  </ex:has>
+                  <bldg:lod2MultiSurface>
+                     <gml:MultiSurface rdf:about="gml:MultiSurface/multi_surf_uuid_77b698b9-6eea-4c56-99b5-a89dfa1205b8">
+                        <schema:identifier>gml:MultiSurface.multi_surf_uuid_77b698b9-6eea-4c56-99b5-a89dfa1205b8</schema:identifier>
+                        <gml:surfaceMember>
+                           <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_61d1e6cf-5113-4b68-a70d-aef46b8df6dd">
+                              <schema:identifier>gml:Polygon.polygon_uuid_61d1e6cf-5113-4b68-a70d-aef46b8df6dd</schema:identifier>
+                           </gml:Polygon>
+                        </gml:surfaceMember>
+                     </gml:MultiSurface>
+                  </bldg:lod2MultiSurface>
+               </bldg:GroundSurface>
+            </bldg:boundedBy>
+            <bldg:boundedBy>
+               <bldg:RoofSurface rdf:about="bldg:RoofSurface/uuid_lod2_029646-7a57aa59-6a29-4260-b1ba_66b1fcc6-e069-4805-88dd-dcca50ddd778">
+                  <schema:identifier>bldg:RoofSurface.uuid_lod2_029646-7a57aa59-6a29-4260-b1ba_66b1fcc6-e069-4805-88dd-dcca50ddd778</schema:identifier>
+                  <ex:has>
+                     <gen:stringAttribute rdf:about="gen:stringAttribute.ridgeHeightuuid_lod2_029646-7a57aa59-6a29-4260-b1ba_66b1fcc6-e069-4805-88dd-dcca50ddd778">
+                        <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">221.06</gen:value>
+                        <schema:identifier>gen:stringAttribute.ridgeHeightuuid_lod2_029646-7a57aa59-6a29-4260-b1ba_66b1fcc6-e069-4805-88dd-dcca50ddd778</schema:identifier>
+                     </gen:stringAttribute>
+                  </ex:has>
+                  <ex:has>
+                     <gen:stringAttribute rdf:about="gen:stringAttribute.raingutterHeightuuid_lod2_029646-7a57aa59-6a29-4260-b1ba_66b1fcc6-e069-4805-88dd-dcca50ddd778">
+                        <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">221.06</gen:value>
+                        <schema:identifier>gen:stringAttribute.raingutterHeightuuid_lod2_029646-7a57aa59-6a29-4260-b1ba_66b1fcc6-e069-4805-88dd-dcca50ddd778</schema:identifier>
+                     </gen:stringAttribute>
+                  </ex:has>
+                  <ex:has>
+                     <gen:stringAttribute rdf:about="gen:stringAttribute.inclinationuuid_lod2_029646-7a57aa59-6a29-4260-b1ba_66b1fcc6-e069-4805-88dd-dcca50ddd778">
+                        <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">90.0</gen:value>
+                        <schema:identifier>gen:stringAttribute.inclinationuuid_lod2_029646-7a57aa59-6a29-4260-b1ba_66b1fcc6-e069-4805-88dd-dcca50ddd778</schema:identifier>
+                     </gen:stringAttribute>
+                  </ex:has>
+                  <ex:has>
+                     <gen:stringAttribute rdf:about="gen:stringAttribute.azimuthuuid_lod2_029646-7a57aa59-6a29-4260-b1ba_66b1fcc6-e069-4805-88dd-dcca50ddd778">
+                        <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-1.0</gen:value>
+                        <schema:identifier>gen:stringAttribute.azimuthuuid_lod2_029646-7a57aa59-6a29-4260-b1ba_66b1fcc6-e069-4805-88dd-dcca50ddd778</schema:identifier>
+                     </gen:stringAttribute>
+                  </ex:has>
+                  <ex:has>
+                     <gen:stringAttribute rdf:about="gen:stringAttribute.areauuid_lod2_029646-7a57aa59-6a29-4260-b1ba_66b1fcc6-e069-4805-88dd-dcca50ddd778">
+                        <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22.222</gen:value>
+                        <schema:identifier>gen:stringAttribute.areauuid_lod2_029646-7a57aa59-6a29-4260-b1ba_66b1fcc6-e069-4805-88dd-dcca50ddd778</schema:identifier>
+                     </gen:stringAttribute>
+                  </ex:has>
+                  <gml:surfaceMember>
+                     <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_5779fff8-8fa1-409e-8dea-603181024211">
+                        <schema:identifier>gml:Polygon.polygon_uuid_5779fff8-8fa1-409e-8dea-603181024211</schema:identifier>
+                     </gml:Polygon>
+                  </gml:surfaceMember>
+               </bldg:RoofSurface>
+            </bldg:boundedBy>
+            <bldg:boundedBy>
+               <bldg:WallSurface rdf:about="bldg:WallSurface/uuid_lod2_029646-7a57aa59-6a29-4260-b1ba_7c41975f-1cc8-4d48-8f73-d9def834525e">
+                  <schema:identifier>bldg:WallSurface.uuid_lod2_029646-7a57aa59-6a29-4260-b1ba_7c41975f-1cc8-4d48-8f73-d9def834525e</schema:identifier>
+                  <ex:has>
+                     <gen:stringAttribute rdf:about="gen:stringAttribute.areauuid_lod2_029646-7a57aa59-6a29-4260-b1ba_7c41975f-1cc8-4d48-8f73-d9def834525e">
+                        <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11.605</gen:value>
+                        <schema:identifier>gen:stringAttribute.areauuid_lod2_029646-7a57aa59-6a29-4260-b1ba_7c41975f-1cc8-4d48-8f73-d9def834525e</schema:identifier>
+                     </gen:stringAttribute>
+                  </ex:has>
+                  <gml:surfaceMember>
+                     <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_7680a365-d295-4e3a-b3bd-0202c58ec02b">
+                        <schema:identifier>gml:Polygon.polygon_uuid_7680a365-d295-4e3a-b3bd-0202c58ec02b</schema:identifier>
+                     </gml:Polygon>
+                  </gml:surfaceMember>
+               </bldg:WallSurface>
+            </bldg:boundedBy>
+            <bldg:boundedBy>
+               <bldg:WallSurface rdf:about="bldg:WallSurface/uuid_lod2_029646-7a57aa59-6a29-4260-b1ba_675a3501-72bf-4460-8f16-04245600eb42">
+                  <schema:identifier>bldg:WallSurface.uuid_lod2_029646-7a57aa59-6a29-4260-b1ba_675a3501-72bf-4460-8f16-04245600eb42</schema:identifier>
+                  <ex:has>
+                     <gen:stringAttribute rdf:about="gen:stringAttribute.areauuid_lod2_029646-7a57aa59-6a29-4260-b1ba_675a3501-72bf-4460-8f16-04245600eb42">
+                        <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19.955</gen:value>
+                        <schema:identifier>gen:stringAttribute.areauuid_lod2_029646-7a57aa59-6a29-4260-b1ba_675a3501-72bf-4460-8f16-04245600eb42</schema:identifier>
+                     </gen:stringAttribute>
+                  </ex:has>
+                  <gml:surfaceMember>
+                     <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_09afb206-da5e-428c-90ea-492891064b1d">
+                        <schema:identifier>gml:Polygon.polygon_uuid_09afb206-da5e-428c-90ea-492891064b1d</schema:identifier>
+                     </gml:Polygon>
+                  </gml:surfaceMember>
+               </bldg:WallSurface>
+            </bldg:boundedBy>
+            <bldg:boundedBy>
+               <bldg:WallSurface rdf:about="bldg:WallSurface/uuid_lod2_029646-7a57aa59-6a29-4260-b1ba_3bd64c17-7954-43a4-9734-fa3618055cca">
+                  <schema:identifier>bldg:WallSurface.uuid_lod2_029646-7a57aa59-6a29-4260-b1ba_3bd64c17-7954-43a4-9734-fa3618055cca</schema:identifier>
+                  <ex:has>
+                     <gen:stringAttribute rdf:about="gen:stringAttribute.areauuid_lod2_029646-7a57aa59-6a29-4260-b1ba_3bd64c17-7954-43a4-9734-fa3618055cca">
+                        <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15.914</gen:value>
+                        <schema:identifier>gen:stringAttribute.areauuid_lod2_029646-7a57aa59-6a29-4260-b1ba_3bd64c17-7954-43a4-9734-fa3618055cca</schema:identifier>
+                     </gen:stringAttribute>
+                  </ex:has>
+                  <gml:surfaceMember>
+                     <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_7d23e148-0899-4762-87c9-5f7b9d5e0b90">
+                        <schema:identifier>gml:Polygon.polygon_uuid_7d23e148-0899-4762-87c9-5f7b9d5e0b90</schema:identifier>
+                     </gml:Polygon>
+                  </gml:surfaceMember>
+               </bldg:WallSurface>
+            </bldg:boundedBy>
+            <bldg:boundedBy>
+               <bldg:WallSurface rdf:about="bldg:WallSurface/uuid_lod2_029646-7a57aa59-6a29-4260-b1ba_5181ae13-6210-4e49-ae72-9e3b7f352f61">
+                  <schema:identifier>bldg:WallSurface.uuid_lod2_029646-7a57aa59-6a29-4260-b1ba_5181ae13-6210-4e49-ae72-9e3b7f352f61</schema:identifier>
+                  <ex:has>
+                     <gen:stringAttribute rdf:about="gen:stringAttribute.areauuid_lod2_029646-7a57aa59-6a29-4260-b1ba_5181ae13-6210-4e49-ae72-9e3b7f352f61">
+                        <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22.183</gen:value>
+                        <schema:identifier>gen:stringAttribute.areauuid_lod2_029646-7a57aa59-6a29-4260-b1ba_5181ae13-6210-4e49-ae72-9e3b7f352f61</schema:identifier>
+                     </gen:stringAttribute>
+                  </ex:has>
+                  <gml:surfaceMember>
+                     <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_0c6b6470-bb45-40e7-806b-689bfdb8b28e">
+                        <schema:identifier>gml:Polygon.polygon_uuid_0c6b6470-bb45-40e7-806b-689bfdb8b28e</schema:identifier>
+                     </gml:Polygon>
+                  </gml:surfaceMember>
+               </bldg:WallSurface>
+            </bldg:boundedBy>
+         </bldg:Building>
+      </core:cityObjectMember>
+      <core:cityObjectMember>
+         <bldg:Building rdf:about="bldg:Building/uuid_57c2781e-d966-4894-956f-27484abe5cb6">
+            <schema:identifier>bldg:Building.uuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute._part_numberuuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gen:value>
+                  <schema:identifier>gen:stringAttribute._part_numberuuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute._geometry_nameuuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">surfaceMember</gen:value>
+                  <schema:identifier>gen:stringAttribute._geometry_nameuuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.areauuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53.02</gen:value>
+                  <schema:identifier>gen:stringAttribute.areauuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.xlink_hrefuuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#polygon_uuid_09f78822-4974-468c-8794-1b8ab7910f0f</gen:value>
+                  <schema:identifier>gen:stringAttribute.xlink_hrefuuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.tile_nameuuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">098075</gen:value>
+                  <schema:identifier>gen:stringAttribute.tile_nameuuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.soilThermalConductivity_200m_labeluuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">durchschnittliche konduktive Wärmeleitfähigkeit (1.8-1.99 W/m/K)</gen:value>
+                  <schema:identifier>gen:stringAttribute.soilThermalConductivity_200m_labeluuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.soilThermalConductivity_200m_classuuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</gen:value>
+                  <schema:identifier>gen:stringAttribute.soilThermalConductivity_200m_classuuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.soilThermalConductivity_200muuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.880635</gen:value>
+                  <schema:identifier>gen:stringAttribute.soilThermalConductivity_200muuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.soilThermalConductivity_100m_labeluuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">durchschnittliche konduktive Wärmeleitfähigkeit (1.8-1.99 W/m/K)</gen:value>
+                  <schema:identifier>gen:stringAttribute.soilThermalConductivity_100m_labeluuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.soilThermalConductivity_100m_classuuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</gen:value>
+                  <schema:identifier>gen:stringAttribute.soilThermalConductivity_100m_classuuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.soilThermalConductivity_100muuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.810623</gen:value>
+                  <schema:identifier>gen:stringAttribute.soilThermalConductivity_100muuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.soilThermalConductivity_30m_labeluuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">durchschnittliche konduktive Wärmeleitfähigkeit (1.8-1.99 W/m/K)</gen:value>
+                  <schema:identifier>gen:stringAttribute.soilThermalConductivity_30m_labeluuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.soilThermalConductivity_30m_classuuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</gen:value>
+                  <schema:identifier>gen:stringAttribute.soilThermalConductivity_30m_classuuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.soilThermalConductivity_30muuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.898743</gen:value>
+                  <schema:identifier>gen:stringAttribute.soilThermalConductivity_30muuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.soilThermalConductivity_10m_labeluuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">durchschnittliche konduktive Wärmeleitfähigkeit (1.8-1.99 W/m/K)</gen:value>
+                  <schema:identifier>gen:stringAttribute.soilThermalConductivity_10m_labeluuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.soilThermalConductivity_10m_classuuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</gen:value>
+                  <schema:identifier>gen:stringAttribute.soilThermalConductivity_10m_classuuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.soilThermalConductivity_10muuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.906269</gen:value>
+                  <schema:identifier>gen:stringAttribute.soilThermalConductivity_10muuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.roofHeightuuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">201.68</gen:value>
+                  <schema:identifier>gen:stringAttribute.roofHeightuuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.nrg_epc_primaryEnergyDemandClass_s1uuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</gen:value>
+                  <schema:identifier>gen:stringAttribute.nrg_epc_primaryEnergyDemandClass_s1uuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.nrg_epc_primaryEnergyDemandClassuuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</gen:value>
+                  <schema:identifier>gen:stringAttribute.nrg_epc_primaryEnergyDemandClassuuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.nrg_epc_heatingDemandClass_s1uuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</gen:value>
+                  <schema:identifier>gen:stringAttribute.nrg_epc_heatingDemandClass_s1uuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.nrg_epc_heatingDemandClassuuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</gen:value>
+                  <schema:identifier>gen:stringAttribute.nrg_epc_heatingDemandClassuuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.nrg_epc_co2EmissionsClass_s1uuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</gen:value>
+                  <schema:identifier>gen:stringAttribute.nrg_epc_co2EmissionsClass_s1uuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.nrg_epc_co2EmissionsClassuuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</gen:value>
+                  <schema:identifier>gen:stringAttribute.nrg_epc_co2EmissionsClassuuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.lowestRaingutterHeightuuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">198.68</gen:value>
+                  <schema:identifier>gen:stringAttribute.lowestRaingutterHeightuuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.lod2Volumeuuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">284.174</gen:value>
+                  <schema:identifier>gen:stringAttribute.lod2Volumeuuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.lod1Volumeuuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">205.717</gen:value>
+                  <schema:identifier>gen:stringAttribute.lod1Volumeuuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.heatPumpAuthorisationuuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bewilligungspflicht</gen:value>
+                  <schema:identifier>gen:stringAttribute.heatPumpAuthorisationuuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.groundwaterThermalPotential_labeluuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1 kW bis &lt; 5 kW</gen:value>
+                  <schema:identifier>gen:stringAttribute.groundwaterThermalPotential_labeluuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.groundwaterThermalPotential_infouuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Betrieb von Kleinanlagen nach Prüfung der lokalen Verhältnisse möglich.</gen:value>
+                  <schema:identifier>gen:stringAttribute.groundwaterThermalPotential_infouuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.groundwaterThermalPotential_classuuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</gen:value>
+                  <schema:identifier>gen:stringAttribute.groundwaterThermalPotential_classuuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.groundHeightuuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">194.68</gen:value>
+                  <schema:identifier>gen:stringAttribute.groundHeightuuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.footprintHeightuuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">194.5</gen:value>
+                  <schema:identifier>gen:stringAttribute.footprintHeightuuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.footprintAreauuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53.02</gen:value>
+                  <schema:identifier>gen:stringAttribute.footprintAreauuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.districtuuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</gen:value>
+                  <schema:identifier>gen:stringAttribute.districtuuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.blockuuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12066003</gen:value>
+                  <schema:identifier>gen:stringAttribute.blockuuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <ex:has>
+               <gen:stringAttribute rdf:about="gen:stringAttribute.bezuguuid_57c2781e-d966-4894-956f-27484abe5cb6">
+                  <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">030065</gen:value>
+                  <schema:identifier>gen:stringAttribute.bezuguuid_57c2781e-d966-4894-956f-27484abe5cb6</schema:identifier>
+               </gen:stringAttribute>
+            </ex:has>
+            <bldg:lod2Solid>
+               <gml:Solid rdf:about="gml:Solid/uuid_9cb281a2-e4a0-41a3-9139-4b046d3e0403">
+                  <schema:identifier>gml:Solid.uuid_9cb281a2-e4a0-41a3-9139-4b046d3e0403</schema:identifier>
+                  <gml:exterior>
+                     <gml:CompositeSurface rdf:about="gml:CompositeSurface/uuid_630352f0-8853-453a-8804-d058c326c3b4">
+                        <schema:identifier>gml:CompositeSurface.uuid_630352f0-8853-453a-8804-d058c326c3b4</schema:identifier>
+                        <gml:surfaceMember>
+                           <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_81930469-7eaf-41eb-9ae9-87db31c1b5ad"/>
+                        </gml:surfaceMember>
+                        <gml:surfaceMember>
+                           <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_eadc9f49-b52c-4be3-b1d8-aa266445a7db"/>
+                        </gml:surfaceMember>
+                        <gml:surfaceMember>
+                           <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_825ed4cf-48eb-49f0-8bf2-e400197765b1"/>
+                        </gml:surfaceMember>
+                        <gml:surfaceMember>
+                           <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_b86dda99-d875-4d94-855b-81660c9f73d4"/>
+                        </gml:surfaceMember>
+                        <gml:surfaceMember>
+                           <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_2b72d572-3b60-4e93-8c0d-6ea2ca5ff13b"/>
+                        </gml:surfaceMember>
+                        <gml:surfaceMember>
+                           <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_f9bb24b4-a886-4379-8694-3b786f58e278"/>
+                        </gml:surfaceMember>
+                        <gml:surfaceMember>
+                           <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_438556bd-a163-4dfa-be14-7b6d6d53e7c5"/>
+                        </gml:surfaceMember>
+                        <gml:surfaceMember>
+                           <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_09f78822-4974-468c-8794-1b8ab7910f0f"/>
+                        </gml:surfaceMember>
+                     </gml:CompositeSurface>
+                  </gml:exterior>
+               </gml:Solid>
+            </bldg:lod2Solid>
+            <bldg:boundedBy>
+               <bldg:WallSurface rdf:about="bldg:WallSurface/uuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_c9055bfa-3fb2-465a-9795-d5928d8be8b8">
+                  <schema:identifier>bldg:WallSurface.uuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_c9055bfa-3fb2-465a-9795-d5928d8be8b8</schema:identifier>
+                  <ex:has>
+                     <gen:stringAttribute rdf:about="gen:stringAttribute.areauuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_c9055bfa-3fb2-465a-9795-d5928d8be8b8">
+                        <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22.661</gen:value>
+                        <schema:identifier>gen:stringAttribute.areauuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_c9055bfa-3fb2-465a-9795-d5928d8be8b8</schema:identifier>
+                     </gen:stringAttribute>
+                  </ex:has>
+                  <gml:surfaceMember>
+                     <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_2b72d572-3b60-4e93-8c0d-6ea2ca5ff13b">
+                        <schema:identifier>gml:Polygon.polygon_uuid_2b72d572-3b60-4e93-8c0d-6ea2ca5ff13b</schema:identifier>
+                     </gml:Polygon>
+                  </gml:surfaceMember>
+               </bldg:WallSurface>
+            </bldg:boundedBy>
+            <bldg:boundedBy>
+               <bldg:WallSurface rdf:about="bldg:WallSurface/uuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_3f1c4f55-bb4b-4f78-9f59-7de9ef779a69">
+                  <schema:identifier>bldg:WallSurface.uuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_3f1c4f55-bb4b-4f78-9f59-7de9ef779a69</schema:identifier>
+                  <ex:has>
+                     <gen:stringAttribute rdf:about="gen:stringAttribute.areauuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_3f1c4f55-bb4b-4f78-9f59-7de9ef779a69">
+                        <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.848</gen:value>
+                        <schema:identifier>gen:stringAttribute.areauuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_3f1c4f55-bb4b-4f78-9f59-7de9ef779a69</schema:identifier>
+                     </gen:stringAttribute>
+                  </ex:has>
+                  <gml:surfaceMember>
+                     <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_b86dda99-d875-4d94-855b-81660c9f73d4">
+                        <schema:identifier>gml:Polygon.polygon_uuid_b86dda99-d875-4d94-855b-81660c9f73d4</schema:identifier>
+                     </gml:Polygon>
+                  </gml:surfaceMember>
+               </bldg:WallSurface>
+            </bldg:boundedBy>
+            <bldg:boundedBy>
+               <bldg:WallSurface rdf:about="bldg:WallSurface/uuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_343d6e34-b911-42eb-8049-8b5bea8a1349">
+                  <schema:identifier>bldg:WallSurface.uuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_343d6e34-b911-42eb-8049-8b5bea8a1349</schema:identifier>
+                  <ex:has>
+                     <gen:stringAttribute rdf:about="gen:stringAttribute.areauuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_343d6e34-b911-42eb-8049-8b5bea8a1349">
+                        <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">43.532</gen:value>
+                        <schema:identifier>gen:stringAttribute.areauuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_343d6e34-b911-42eb-8049-8b5bea8a1349</schema:identifier>
+                     </gen:stringAttribute>
+                  </ex:has>
+                  <gml:surfaceMember>
+                     <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_825ed4cf-48eb-49f0-8bf2-e400197765b1">
+                        <schema:identifier>gml:Polygon.polygon_uuid_825ed4cf-48eb-49f0-8bf2-e400197765b1</schema:identifier>
+                     </gml:Polygon>
+                  </gml:surfaceMember>
+               </bldg:WallSurface>
+            </bldg:boundedBy>
+            <bldg:boundedBy>
+               <bldg:WallSurface rdf:about="bldg:WallSurface/uuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_124ecc3a-6a24-4d49-8260-0ccb9d53a46a">
+                  <schema:identifier>bldg:WallSurface.uuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_124ecc3a-6a24-4d49-8260-0ccb9d53a46a</schema:identifier>
+                  <ex:has>
+                     <gen:stringAttribute rdf:about="gen:stringAttribute.areauuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_124ecc3a-6a24-4d49-8260-0ccb9d53a46a">
+                        <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44.908</gen:value>
+                        <schema:identifier>gen:stringAttribute.areauuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_124ecc3a-6a24-4d49-8260-0ccb9d53a46a</schema:identifier>
+                     </gen:stringAttribute>
+                  </ex:has>
+                  <gml:surfaceMember>
+                     <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_eadc9f49-b52c-4be3-b1d8-aa266445a7db">
+                        <schema:identifier>gml:Polygon.polygon_uuid_eadc9f49-b52c-4be3-b1d8-aa266445a7db</schema:identifier>
+                     </gml:Polygon>
+                  </gml:surfaceMember>
+               </bldg:WallSurface>
+            </bldg:boundedBy>
+            <bldg:boundedBy>
+               <bldg:GroundSurface rdf:about="bldg:GroundSurface/uuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_11de23fa-70e0-42fc-a5dc-9c2659c2d0c9">
+                  <schema:identifier>bldg:GroundSurface.uuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_11de23fa-70e0-42fc-a5dc-9c2659c2d0c9</schema:identifier>
+                  <ex:has>
+                     <gen:stringAttribute rdf:about="gen:stringAttribute.groundHeightuuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_11de23fa-70e0-42fc-a5dc-9c2659c2d0c9">
+                        <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">194.5</gen:value>
+                        <schema:identifier>gen:stringAttribute.groundHeightuuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_11de23fa-70e0-42fc-a5dc-9c2659c2d0c9</schema:identifier>
+                     </gen:stringAttribute>
+                  </ex:has>
+                  <ex:has>
+                     <gen:stringAttribute rdf:about="gen:stringAttribute.areauuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_11de23fa-70e0-42fc-a5dc-9c2659c2d0c9">
+                        <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53.02</gen:value>
+                        <schema:identifier>gen:stringAttribute.areauuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_11de23fa-70e0-42fc-a5dc-9c2659c2d0c9</schema:identifier>
+                     </gen:stringAttribute>
+                  </ex:has>
+                  <bldg:lod2MultiSurface>
+                     <gml:MultiSurface rdf:about="gml:MultiSurface/multi_surf_uuid_8ec0ab8f-643c-4e7b-bb97-bd955ee39c56">
+                        <schema:identifier>gml:MultiSurface.multi_surf_uuid_8ec0ab8f-643c-4e7b-bb97-bd955ee39c56</schema:identifier>
+                        <gml:surfaceMember>
+                           <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_09f78822-4974-468c-8794-1b8ab7910f0f">
+                              <schema:identifier>gml:Polygon.polygon_uuid_09f78822-4974-468c-8794-1b8ab7910f0f</schema:identifier>
+                           </gml:Polygon>
+                        </gml:surfaceMember>
+                     </gml:MultiSurface>
+                  </bldg:lod2MultiSurface>
+               </bldg:GroundSurface>
+            </bldg:boundedBy>
+            <bldg:boundedBy>
+               <bldg:RoofSurface rdf:about="bldg:RoofSurface/uuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_2d5102f9-d630-4110-b7d5-86b725159906">
+                  <schema:identifier>bldg:RoofSurface.uuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_2d5102f9-d630-4110-b7d5-86b725159906</schema:identifier>
+                  <ex:has>
+                     <gen:stringAttribute rdf:about="gen:stringAttribute.ridgeHeightuuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_2d5102f9-d630-4110-b7d5-86b725159906">
+                        <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">201.31</gen:value>
+                        <schema:identifier>gen:stringAttribute.ridgeHeightuuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_2d5102f9-d630-4110-b7d5-86b725159906</schema:identifier>
+                     </gen:stringAttribute>
+                  </ex:has>
+                  <ex:has>
+                     <gen:stringAttribute rdf:about="gen:stringAttribute.raingutterHeightuuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_2d5102f9-d630-4110-b7d5-86b725159906">
+                        <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">198.39</gen:value>
+                        <schema:identifier>gen:stringAttribute.raingutterHeightuuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_2d5102f9-d630-4110-b7d5-86b725159906</schema:identifier>
+                     </gen:stringAttribute>
+                  </ex:has>
+                  <ex:has>
+                     <gen:stringAttribute rdf:about="gen:stringAttribute.inclinationuuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_2d5102f9-d630-4110-b7d5-86b725159906">
+                        <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">70.79</gen:value>
+                        <schema:identifier>gen:stringAttribute.inclinationuuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_2d5102f9-d630-4110-b7d5-86b725159906</schema:identifier>
+                     </gen:stringAttribute>
+                  </ex:has>
+                  <ex:has>
+                     <gen:stringAttribute rdf:about="gen:stringAttribute.azimuthuuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_2d5102f9-d630-4110-b7d5-86b725159906">
+                        <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7.83</gen:value>
+                        <schema:identifier>gen:stringAttribute.azimuthuuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_2d5102f9-d630-4110-b7d5-86b725159906</schema:identifier>
+                     </gen:stringAttribute>
+                  </ex:has>
+                  <ex:has>
+                     <gen:stringAttribute rdf:about="gen:stringAttribute.areauuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_2d5102f9-d630-4110-b7d5-86b725159906">
+                        <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">56.145</gen:value>
+                        <schema:identifier>gen:stringAttribute.areauuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_2d5102f9-d630-4110-b7d5-86b725159906</schema:identifier>
+                     </gen:stringAttribute>
+                  </ex:has>
+                  <gml:surfaceMember>
+                     <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_438556bd-a163-4dfa-be14-7b6d6d53e7c5">
+                        <schema:identifier>gml:Polygon.polygon_uuid_438556bd-a163-4dfa-be14-7b6d6d53e7c5</schema:identifier>
+                     </gml:Polygon>
+                  </gml:surfaceMember>
+               </bldg:RoofSurface>
+            </bldg:boundedBy>
+            <bldg:boundedBy>
+               <bldg:WallSurface rdf:about="bldg:WallSurface/uuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_23766d5c-6ac3-4b19-a284-36bbe1425ecd">
+                  <schema:identifier>bldg:WallSurface.uuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_23766d5c-6ac3-4b19-a284-36bbe1425ecd</schema:identifier>
+                  <ex:has>
+                     <gen:stringAttribute rdf:about="gen:stringAttribute.areauuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_23766d5c-6ac3-4b19-a284-36bbe1425ecd">
+                        <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44.307</gen:value>
+                        <schema:identifier>gen:stringAttribute.areauuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_23766d5c-6ac3-4b19-a284-36bbe1425ecd</schema:identifier>
+                     </gen:stringAttribute>
+                  </ex:has>
+                  <gml:surfaceMember>
+                     <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_81930469-7eaf-41eb-9ae9-87db31c1b5ad">
+                        <schema:identifier>gml:Polygon.polygon_uuid_81930469-7eaf-41eb-9ae9-87db31c1b5ad</schema:identifier>
+                     </gml:Polygon>
+                  </gml:surfaceMember>
+               </bldg:WallSurface>
+            </bldg:boundedBy>
+            <bldg:boundedBy>
+               <bldg:WallSurface rdf:about="bldg:WallSurface/uuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_19f05280-cf9d-4166-baf0-6218a75c4f60">
+                  <schema:identifier>bldg:WallSurface.uuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_19f05280-cf9d-4166-baf0-6218a75c4f60</schema:identifier>
+                  <ex:has>
+                     <gen:stringAttribute rdf:about="gen:stringAttribute.areauuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_19f05280-cf9d-4166-baf0-6218a75c4f60">
+                        <gen:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.395</gen:value>
+                        <schema:identifier>gen:stringAttribute.areauuid_lod2_030065-13d1f4f2-95e6-4fb6-8310_19f05280-cf9d-4166-baf0-6218a75c4f60</schema:identifier>
+                     </gen:stringAttribute>
+                  </ex:has>
+                  <gml:surfaceMember>
+                     <gml:Polygon rdf:about="gml:Polygon/polygon_uuid_f9bb24b4-a886-4379-8694-3b786f58e278">
+                        <schema:identifier>gml:Polygon.polygon_uuid_f9bb24b4-a886-4379-8694-3b786f58e278</schema:identifier>
+                     </gml:Polygon>
+                  </gml:surfaceMember>
+               </bldg:WallSurface>
+            </bldg:boundedBy>
+         </bldg:Building>
+      </core:cityObjectMember>
+   </core:CityModel>
+</rdf:RDF>
